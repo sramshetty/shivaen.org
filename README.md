@@ -2,5 +2,6 @@
 * Static HTML, SCSS, JS
 * Deployed on AWS Amplify
 #### Resources Used
-Home Shooting Star Background- 
-Contact Page Background- 
+* Bootstrap
+* Portfolio Page Cards: https://codepen.io/hexagoncircle/pen/XWbWKwL
+* Contact Page Background- 
