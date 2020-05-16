@@ -1,4 +1,11 @@
-/* Header */
+@import url("https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap");
+:root {
+	--d: 700ms;
+	--e: cubic-bezier(0.19, 1, 0.22, 1);
+	--font-sans: 'Rubik', sans-serif;
+	--font-serif: 'Cardo', serif;
+  }
+
 .large-header {
 	position: relative;
 	width: 100%;
@@ -39,4 +46,55 @@
 	.demo-1 .main-title {
 		font-size: 3em;
 	}
+}
+
+div.links a {
+	color: white;
+}
+
+div.links a:hover {
+	color: black;
+}
+
+.header {
+	background-color: transparent;
+	padding-top: .5%;
+	padding-bottom: 0%;
+	width: 100%;
+	font-family: var(--font-sans);
+} 
+  
+.header a:hover {
+	color: white;
+	text-decoration: none;
+}
+
+.header a:hover span {
+	display: none;
+}
+
+.header a.logo:hover::before {
+	content: "{ SR }";
+}
+
+.header-right {
+	float: right;
+	padding-top: .6%;
+	padding-right: 1%;
+}
+
+.header-right a:hover {
+	font-size: large;
+	color: white;
+	text-decoration: none;
+}
+
+.logo {
+	font-size: xx-large;
+	color: white;
+	padding-top: 0%;
+	padding-left: 1%;
+}
+.link {
+	color: white;
 }
