@@ -155,7 +155,7 @@ header a.logo:hover::before {
   background-image: url("../assets/{SR}.png");
 }
 .card-projects:nth-child(2):before {
-  background-image: url("../assets/ZEST.jpg");
+  background-image: url("../assets/Zest.png");
 }
 
 .content {
