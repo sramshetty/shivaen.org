@@ -59,7 +59,7 @@ header a.logo:hover::before {
 .intro{
     background-color: black;
     padding-top: 12%;
-    height: 70%;
+    height: 55%;
     width: 100%;
     color: white;
 }
@@ -108,3 +108,250 @@ header a.logo:hover::before {
     margin-top: -95px;
     margin-left: -375px;
 }
+
+//rose animation adapted from : Copyright (c) 2020 by Marjo Sobrecaray (https://codepen.io/maaarj/pen/gmNeXd)
+// @import 'compass/css3/transform';
+// $bg: #122139;
+// $rose1 : #d52d58;
+// $rose2: #9e183a;
+// $rose3: #b81b43;
+// $rose4 :#c9204b;
+
+// @function randomNum($min, $max) {
+//   $rand: random();
+//   $randomNum: $min + floor($rand * (($max - $min) + 1));
+
+//   @return $randomNum;
+// }
+
+// @mixin keyframes($animationName) {
+//   @-webkit-keyframes #{"$animationName"} {
+//     @content;
+//   }
+//   @-moz-keyframes #{$animationName} {
+//     @content;
+//   }
+
+//   @-ms-keyframes #{$animationName} {
+//     @content;
+//   }
+
+//   @keyframes #{$animationName} {
+//     @content;
+//   }
+// }
+// .container-rose 
+// {
+//     width: 100px;
+//     height: 300px;
+// 	position: absolute;
+// 	left: 0;
+// 	right: 0;
+// 	top:0;
+// 	bottom: 0;
+// 	margin:auto;
+// 	@include transform(scale(0.6));
+// 	div
+// 	{
+// 		position: absolute;
+// 	}
+// 	.rose-petals {
+// 		&>div {
+// 			background:$rose1;
+// 			width: 45px;
+// 			height: 80px;
+// 			position: absolute;
+// 			@include transition(all 0.5s ease-out);
+// 		}
+// 		&>div:nth-child(1) {
+// 			border-radius: 15px;
+// 			left: 20px;
+// 			top: -6px;
+// 			background:$rose1;
+// 		}
+		
+// 		&>div:nth-child(2),
+// 		&>div:nth-child(4),
+// 		&>div:nth-child(6){
+// 			border-radius:  0px 30px 0px 30px;
+// 			background: $rose3;
+// 			left:0;
+// 			transform-origin:bottom right;
+// 		}
+		
+// 		&>div:nth-child(3),
+// 		&>div:nth-child(5),
+// 		&>div:nth-child(7){
+// 			border-radius:  30px 0px 30px 0px;
+// 			left: 40px;
+// 			transform-origin:bottom left;
+// 		}
+		
+// 		@for $i from 2 to 8 {
+// 			$background:'';
+// 			$top:'';
+// 			$h:'';
+// 			@if($i==2 or $i==3) {
+// 				$background:$rose2;
+// 				$top:10px;
+// 				$h:70px;
+// 			}
+// 			@if($i==4 or $i==5) {
+// 				$background:$rose3;
+// 				$top:5px;
+// 				$h:75px;
+// 			}
+// 			@if($i==6 or $i==7) {
+// 				$background:$rose4;
+// 			}
+			
+// 			&>div:nth-child(#{$i}) {
+// 				@include animation(openRose+$i 3s ease-in-out);
+// 				@include animation-fill-mode(forwards);
+// 				z-index:7-$i;
+// 				background:$background;
+// 				top:$top;
+// 				height:$h;
+// 				@include animation-delay(1s)
+// 			}
+// 		}
+		
+// 	} //end of rose petals
+// 	.rose-leaves {
+// 		&>div:nth-last-child(1) {
+// 		    width: 55px;
+// 		    height: 30px;
+// 		    background: #338f37;
+// 		    position: absolute;
+// 		    top: 60px;
+// 		    left: 15px;
+// 		    @include border-radius(100px);
+// 		}
+// 		& > div:nth-child(1) {
+// 			@include animation(moveStem 3s ease-in-out);
+// 			@include animation-fill-mode(forwards);
+// 			width: 6px;
+// 			height: 50px;
+// 			border: none;
+// 			top: 80px;
+// 			background: #066406;
+// 			left: 40px;
+// 			animation-delay: 3s;
+// 		}
+// 	} //end of rose-leaves/stem
+// }
+// @include keyframes(openRose2){
+// 	50% {
+// 		@include transform(rotate(-70deg));
+// 		top:80px;
+// 		left: 100px;
+// 	}
+// 	100% {
+// 		@include transform(rotate(-50deg));
+// 		top:210px;
+// 		left: 25px;
+// 	}
+// }
+// @include keyframes(openRose3){
+// 	50% {
+// 		@include transform(rotate(120deg));
+// 		top:80px;
+// 		left: -100px;
+// 	}
+// 	100% {
+// 		@include transform(rotate(50deg));
+// 		top:210px;
+// 		left: 20px;
+// 	}
+// }
+
+// @include keyframes(openRose4){
+// 	100% {
+// 		@include transform(rotate(-30deg));
+// 	}
+// }
+// @include keyframes(openRose5){
+// 	100% {
+// 		@include transform(rotate(30deg));
+// 	}
+// }
+// @include keyframes(moveStem){
+// 	100% {
+// 		top:210px;
+// 		left: 40px;
+// 	}
+// }
+
+.roses {
+    background-color: black;
+    width: 100%;
+    height: 40%;
+}
+.roses .rose {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 17%;
+}
+
+img {
+    width: 20%;
+    height: auto;
+}
+
+//scroll symbol
+#scroll a {
+    padding-top: 80px;
+  }
+  #scroll a span {
+    position: absolute;
+    top: 50%;
+    left: 90%;
+    width: 24px;
+    height: 24px;
+    margin-left: -12px;
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-animation: scr 2s infinite;
+    animation: scr 2s infinite;
+    opacity: 0;
+    box-sizing: border-box;
+  }
+  #scroll a span:nth-of-type(1) {
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+  }
+  #scroll a span:nth-of-type(2) {
+    top: 51%;
+    -webkit-animation-delay: .15s;
+    animation-delay: .15s;
+  }
+  #scroll a span:nth-of-type(3) {
+    top: 52%;
+    -webkit-animation-delay: .3s;
+    animation-delay: .3s;
+  }
+  @-webkit-keyframes scr {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  @keyframes scr {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }

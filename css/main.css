@@ -60,7 +60,7 @@ header a.logo:hover::before {
 .intro {
   background-color: black;
   padding-top: 12%;
-  height: 70%;
+  height: 55%;
   width: 100%;
   color: white;
 }
@@ -111,5 +111,86 @@ header a.logo:hover::before {
   left: 50%;
   margin-top: -95px;
   margin-left: -375px;
+}
+
+.roses {
+  background-color: black;
+  width: 100%;
+  height: 40%;
+}
+
+.roses .rose {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 17%;
+}
+
+img {
+  width: 20%;
+  height: auto;
+}
+
+#scroll a {
+  padding-top: 80px;
+}
+
+#scroll a span {
+  position: absolute;
+  top: 50%;
+  left: 90%;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-animation: scr 2s infinite;
+  animation: scr 2s infinite;
+  opacity: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#scroll a span:nth-of-type(1) {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+
+#scroll a span:nth-of-type(2) {
+  top: 51%;
+  -webkit-animation-delay: .15s;
+  animation-delay: .15s;
+}
+
+#scroll a span:nth-of-type(3) {
+  top: 52%;
+  -webkit-animation-delay: .3s;
+  animation-delay: .3s;
+}
+
+@-webkit-keyframes scr {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes scr {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 /*# sourceMappingURL=main.css.map */

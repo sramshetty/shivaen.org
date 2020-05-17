@@ -25,254 +25,46 @@
     <canvas id="dots-1"></canvas>
     <div class="container">
       <div class="text"></div>
+      <section id="scroll" class="demo">
+        <a href="#down"><span></span><span></span><span></span></a>
+      </section>
     </div>
-    <!-- <div class="text">
-      <span class="not-collapse">S</span>
-      <span class="collapse">HIVAEN</span>
-      <span class="not-collapse"> R</span>
-      <span class="collapse">ASMHETTY</span>
-    </div> -->
-    <br>
+    <img src="smiley.gif" alt="Smiley face" height="42" width="42" style="display: none">
     <canvas id="dots-2"></canvas>
   </div>
-  <div class="about">
-    <h3>About Me</h3>
+  <div class="roses">
+    <img src="assets/rose.png" alt="rose" class="rose"> <!-- http://pngimg.com/download/67012 -->
+    <!-- <div class="container-rose">
+      <div class="rose-leaves">
+        <div></div>
+        <div></div>
+      </div>
+      <div class="rose-petals">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div> -->
+  </div>
+  <div id="down" class="about">
+    <h2>About Me</h2>
   </div>
   <script src="js/home_text.js"></script>
   <script src="js/dots-1.js"></script>
   <script src="js/dots-2.js"></script>
   <script>
-    function InteractiveParticles(canvas, args){
-    var that = this;
-    this.canvas = canvas;
-    this.args = args;
-    this.density = 12;
-    this.produceDistance = 1;
-    this.baseRadius = 2.377;
-    this.reactionSensitivity = 1;
-    this.particleRecessSpeed = 0.15;
-    this.canvasPadding = 30
-    this.ignoreColors = [];
-    this.particles = [];
-    this.mouse = {
-        x: -1000,
-        y: -1000,
-        down: false
-    };
-    this.animation = null;
-    this.context = null;
-    this.bgImage = null;
-    this.bgCanvas = null;
-    this.bgContext = null;
-    this.bgContextPixelData = null;
-  
-    for (var key in args) {
-      this[key] = args[key];
-    }
-  
-    this.add = function() {
-        // Set up the visual canvas
-        that.context = that.canvas.getContext('2d', { alpha: true });
-  
-        // this.context.globalCompositeOperation = "lighter";
-        if(that.size.length){
-          that.canvas.width = that.size[0] + (that.canvasPadding*2);
-          that.canvas.height = that.size[1] + (that.canvasPadding*2);
-        }else{
-          that.canvas.width = that.canvas.clientWidth + (that.canvasPadding*2);
-          that.canvas.height = that.canvas.clientHeight + (that.canvasPadding*2);
-        }
-  
-        that.canvas.style.display = 'block'
-        that.canvas.addEventListener('mousemove', that.pointerMove, false);
-        that.canvas.addEventListener('mouseout', that.pointerOut, false);
-        that.canvas.addEventListener('touchstart', that.pointerMove, false);
-        that.canvas.addEventListener('ontouchend', that.pointerOut, false);
-  
-        window.onresize = function(event) {
-          if(that.size.length){
-            that.canvas.width = that.size[0];
-            that.canvas.height = that.size[1];
-          }else{
-            that.canvas.width = that.canvas.clientWidth;
-            that.canvas.height = that.canvas.clientHeight;
-          }
-          that.onWindowResize();
-        }
-  
-        // Load initial input image
-        that.getImageData(that.image);
-    };
-  
-    this.makeParticles = function() {
-        // remove the current particles
-        that.particles = [];
-        var width, height, i, j;
-        var colors = that.bgContextPixelData.data;
-  
-        for (i = 0; i < that.canvas.height; i += that.density) {
-  
-            for (j = 0; j < that.canvas.width; j += that.density) {
-  
-  
-                var pixelPosition = (j + i * that.bgContextPixelData.width) * 4;
-  
-                // Ignore colors
-                var ignoreColor = false;
-                if(that.ignoreColors.length){
-                    for (var ckey in that.ignoreColors){
-                        if (colors[pixelPosition] == that.ignoreColors[ckey][0] && (colors[pixelPosition + 1]) == that.ignoreColors[ckey][1] && (colors[pixelPosition + 2]) == that.ignoreColors[ckey][2]) {
-                            ignoreColor = true;
-                        }
-                    }
-                    if(ignoreColor) continue;
-                }
-  
-                var color = 'rgba(' + colors[pixelPosition] + ',' + colors[pixelPosition + 1] + ',' + colors[pixelPosition + 2] + ',' + '1)';
-                that.particles.push({
-                    x: j,
-                    y: i,
-                    originalX: j,
-                    originalY: i,
-                    color: color
-                });
-            }
-        }
-    };
-  
-    this.updateparticles = function() {
-  
-        var i, currentPoint, theta, distance;
-  
-        for (i = 0; i < that.particles.length; i++) {
-  
-            currentPoint = that.particles[i];
-  
-            theta = Math.atan2(currentPoint.y - that.mouse.y, currentPoint.x - that.mouse.x);
-  
-            if (that.mouse.down) {
-                distance = that.reactionSensitivity * 200 / Math.sqrt((that.mouse.x - currentPoint.x) * (that.mouse.x - currentPoint.x) +
-                    (that.mouse.y - currentPoint.y) * (that.mouse.y - currentPoint.y));
-            } else {
-                distance = that.reactionSensitivity * 100 / Math.sqrt((that.mouse.x - currentPoint.x) * (that.mouse.x - currentPoint.x) +
-                    (that.mouse.y - currentPoint.y) * (that.mouse.y - currentPoint.y));
-            }
-  
-  
-            currentPoint.x += Math.cos(theta) * distance + (currentPoint.originalX - currentPoint.x) * that.particleRecessSpeed;
-            currentPoint.y += Math.sin(theta) * distance + (currentPoint.originalY - currentPoint.y) * that.particleRecessSpeed;
-  
-        }
-    };
-  
-    this.produceparticles = function() {
-  
-        var i, currentPoint;
-  
-        for (i = 0; i < that.particles.length; i++) {
-  
-            currentPoint = that.particles[i];
-  
-            // produce the dot.
-            that.context.fillStyle = currentPoint.color;
-            that.context.strokeStyle = currentPoint.color;
-  
-            that.context.beginPath();
-            that.context.arc(currentPoint.x, currentPoint.y, that.baseRadius, 0, Math.PI * 2, true);
-            that.context.closePath();
-            that.context.fill();
-  
-        }
-    };
-  
-    this.produce = function() {
-        that.animation = requestAnimationFrame(function() {
-            that.produce()
-        });
-  
-        that.remove();
-        that.updateparticles();
-        that.produceparticles();
-  
-    };
-  
-    this.remove = function() {
-      that.canvas.width = that.canvas.width;
-    };
-  
-    // The filereader has loaded the image... add it to image object to be producen
-    this.getImageData = function(data) {
-  
-      that.bgImage = new Image;
-      that.bgImage.src = data;
-  
-      that.bgImage.onload = function() {
-  
-      //this
-          that.produceInteractiveParticles();
-      }
-    };
-  
-    // Image is loaded... produce to bg canvas
-    this.produceInteractiveParticles = function() {
-  
-      that.bgCanvas = document.createElement('canvas');
-      that.bgCanvas.width = that.canvas.width;
-      that.bgCanvas.height = that.canvas.height;
-  
-        var newWidth, newHeight;
-  
-        // // If the image is too big for the screen... scale it down.
-        // if (this.bgImage.width > this.bgCanvas.width - this.canvasPadding || this.bgImage.height > this.bgCanvas.height - this.canvasPadding) {
-        //     var maxRatio = Math.max(this.bgImage.width / (this.bgCanvas.width - this.canvasPadding), this.bgImage.height / (this.bgCanvas.height - this.canvasPadding));
-        //     newWidth = this.bgImage.width / maxRatio;
-        //     newHeight = this.bgImage.height / maxRatio;
-        // } else {
-            newWidth = that.bgImage.width;
-            newHeight = that.bgImage.height;
-        // }
-  
-        // produce to background canvas
-        that.bgContext = that.bgCanvas.getContext('2d', { alpha: false });
-        that.bgContext.drawImage(that.bgImage, Math.round((that.canvas.width - newWidth) / 2), Math.round((that.canvas.height - newHeight) / 2), Math.round(newWidth), Math.round(newHeight));
-        that.bgContextPixelData = that.bgContext.getImageData(0, 0, Math.round(that.bgCanvas.width), Math.round(that.bgCanvas.height));
-  
-        that.makeParticles();
-        that.produce();
-    };
-  
-    this.pointerMove = function(event) {
-        that.mouse.x = event.offsetX || (event.layerX - that.canvas.offsetLeft);
-        that.mouse.y = event.offsetY || (event.layerY - that.canvas.offsetTop);
-    };
-  
-    this.pointerOut = function(event) {
-        that.mouse.x = -1000;
-        that.mouse.y = -1000;
-        that.mouse.down = false;
-    };
-  
-    // Resize and reproduce the canvas.
-    this.onWindowResize = function() {
-        cancelAnimationFrame(that.animation);
-        that.produceInteractiveParticles();
-    };
-  
-    this.add(this.canvas, this.args);
-  }
-  
-  (function() {
-    var dots = new InteractiveParticles(document.getElementById('dots'), {
-      size: [690,130],
-      density: 5,
-      baseRadius: 1,
-      ignoreColors: [
-        [0,0,0]
-      ],
-      // image: "https://blog.codepen.io/wp-content/uploads/2012/06/Button-Fill-White-Large.png",
-      image: ""
-      });
-  })()
+    // $(document).ready(function() {
+    //   $(".container").hover(function() {
+    //     $(this).hide();
+    //     $("img").css("display", "inline")
+    //   });
+    // });
+
+    //Scrolling effect
   </script>
 </body>
 
