@@ -30,10 +30,9 @@
       </section>
     </div>
     <img src="smiley.gif" alt="Smiley face" height="42" width="42" style="display: none">
-    <canvas id="dots-2"></canvas>
+    <canvas id="dots-2"></canvas><br>
+    <canvas id="rose"></canvas>
   </div>
-  <div class="roses">
-    <img src="assets/rose.png" alt="rose" class="rose"> <!-- http://pngimg.com/download/67012 -->
     <!-- <div class="container-rose">
       <div class="rose-leaves">
         <div></div>
@@ -49,13 +48,27 @@
         <div></div>
       </div>
     </div> -->
-  </div>
   <div id="down" class="about">
-    <h2>About Me</h2>
+    <div class="about-text">
+      <h2>About Me</h2>
+      <h5>I am 20 years old and studying Computer Science.</h5>
+      <h5>
+        Currently, I am focusing on improving my abilities in the fields of data science and AI and hope to join those fields in the upcoming years.
+        I welcome all oppurtnities as a chance to grow and will continue to work towards the goals I have set for myself. 
+      </h5>
+      <h5>
+        Don't hesitate to contact me and I wish you the best.
+      </h5>
+    </div>
+    <div class="showcase">
+      <img src="assets/astronaut-2.jpg" alt="profile_pic" class="profile">
+    </div>
+    <div class="back-showcase"></div>
   </div>
   <script src="js/home_text.js"></script>
   <script src="js/dots-1.js"></script>
   <script src="js/dots-2.js"></script>
+  <script src="js/rose.js"></script>
   <script>
     // $(document).ready(function() {
     //   $(".container").hover(function() {
@@ -64,7 +77,20 @@
     //   });
     // });
 
-    //Scrolling effect
+    //Scrolling effect, from https://www.w3schools.com/howto/howto_css_smooth_scroll.asp#section2
+    $(document).ready(function(){
+      $("a").on('click', function(event) {
+        if (this.hash !== "") {
+          event.preventDefault();
+          var hash = this.hash;
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 1000, function(){
+            window.location.hash = hash;
+          });
+        }
+      });
+    });
   </script>
 </body>
 

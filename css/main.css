@@ -60,7 +60,7 @@ header a.logo:hover::before {
 .intro {
   background-color: black;
   padding-top: 12%;
-  height: 55%;
+  height: 100%;
   width: 100%;
   color: white;
 }
@@ -91,12 +91,6 @@ header a.logo:hover::before {
   background: url("../assets/milky-way-2881461.jpg");
 }
 
-.about {
-  text-align: center;
-  background-color: white;
-  font-family: var(--font-sans);
-}
-
 #dots-1 {
   position: absolute;
   top: 20%;
@@ -113,22 +107,12 @@ header a.logo:hover::before {
   margin-left: -375px;
 }
 
-.roses {
-  background-color: black;
-  width: 100%;
-  height: 40%;
-}
-
-.roses .rose {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 17%;
-}
-
-img {
-  width: 20%;
-  height: auto;
+#rose {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  margin-top: -95px;
+  margin-left: -375px;
 }
 
 #scroll a {
@@ -191,6 +175,78 @@ img {
   }
   100% {
     opacity: 0;
+  }
+}
+
+.about {
+  text-align: center;
+  background-color: white;
+  height: 30%;
+  font-family: var(--font-sans);
+}
+
+.about-text {
+  float: left;
+  position: relative;
+}
+
+.about h5 {
+  text-align: left;
+  margin-top: 2%;
+  margin-left: 15%;
+  margin-right: 40%;
+}
+
+.showcase {
+  position: absolute;
+  float: left;
+  background-color: black;
+  top: 115%;
+  left: 67%;
+  width: 15vw;
+  height: 10vw;
+  z-index: 3;
+}
+
+.profile {
+  margin-top: 1.5vw;
+}
+
+.back-showcase {
+  position: absolute;
+  float: left;
+  top: 117%;
+  left: 69%;
+  width: 15vw;
+  height: 10vw;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 200% 200%;
+  -webkit-animation: gradient 10s ease infinite;
+          animation: gradient 10s ease infinite;
+  z-index: 2;
+}
+
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
 /*# sourceMappingURL=main.css.map */

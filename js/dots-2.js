@@ -219,7 +219,7 @@ function InteractiveParticles(canvas, args){
   
   (function() {
     var dots1 = new InteractiveParticles(document.getElementById('dots-2'), {
-      size: [690,130],
+      size: [720,130],
       density: 5,
       baseRadius: 1,
       ignoreColors: [
