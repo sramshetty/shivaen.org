@@ -8,4 +8,5 @@
   * Interactive Particles: Copyright (c) 2020 by richardevcom (https://codepen.io/richardev/pen/YzzOJXr)
 * Home Page Scroll: Copyright (c) 2020 by Naoya (https://codepen.io/nxworld/pen/OyRrGy)
 * Portfolio Page Cards: Copyright (c) 2020 by Ryan Mulligan (https://codepen.io/hexagoncircle/pen/XWbWKwL)
+* Solar System Load Page: Copyright (c) 2020 by Jack Thomson (https://codepen.io/Jackthomsonn/pen/bdLGrq)
 * Contact Page Background: Copyright (c) 2020 by Marco Guglielmelli (https://codepen.io/MarcoGuglielmelli/pen/lLCxy)
