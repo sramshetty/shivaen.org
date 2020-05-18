@@ -1,0 +1,3759 @@
+.container {
+  margin: 250px auto;
+  width: 768px;
+  -webkit-transform: scale(0.6);
+          transform: scale(0.6);
+}
+
+.sun {
+  background: -webkit-gradient(linear, left top, right top, from(#BB513E), to(#994233));
+  background: linear-gradient(90deg, #BB513E, #994233);
+  -webkit-box-shadow: inset 15px 10px 0px #994233;
+          box-shadow: inset 15px 10px 0px #994233;
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  margin: 105px auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.mercury {
+  background: -webkit-gradient(linear, left top, right top, from(#453217), to(#2a1f0e));
+  background: linear-gradient(90deg, #453217, #2a1f0e);
+  -webkit-box-shadow: inset 0px 7px 0px #2a1f0e;
+          box-shadow: inset 0px 7px 0px #2a1f0e;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  margin-top: 10px;
+}
+
+.venus {
+  background: -webkit-gradient(linear, left top, right top, from(#AC6339), to(#915430));
+  background: linear-gradient(90deg, #AC6339, #915430);
+  -webkit-box-shadow: inset 0px 7px 0px #7e492a;
+          box-shadow: inset 0px 7px 0px #7e492a;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  margin-top: 30px;
+}
+
+.earth {
+  background: -webkit-gradient(linear, left top, right top, from(#3E8EBB), to(#357aa0));
+  background: linear-gradient(90deg, #3E8EBB, #357aa0);
+  -webkit-box-shadow: inset 0px 7px 0px #2f6b8d;
+          box-shadow: inset 0px 7px 0px #2f6b8d;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  margin-top: 70px;
+}
+
+.mars {
+  background: -webkit-gradient(linear, left top, right top, from(#6F3125), to(#54251c));
+  background: linear-gradient(90deg, #6F3125, #54251c);
+  -webkit-box-shadow: inset 0px 7px 0px #4d221a;
+          box-shadow: inset 0px 7px 0px #4d221a;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  margin-top: 110px;
+}
+
+.jupiter {
+  background: -webkit-gradient(linear, left top, right top, from(#3D2C14), to(#22190b));
+  background: linear-gradient(90deg, #3D2C14, #22190b);
+  -webkit-box-shadow: inset 0px 7px 0px #2a1e0e;
+          box-shadow: inset 0px 7px 0px #2a1e0e;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  margin-top: 160px;
+}
+
+.saturn {
+  background: -webkit-gradient(linear, left top, right top, from(#E97340), to(#e55c20));
+  background: linear-gradient(90deg, #E97340, #e55c20);
+  -webkit-box-shadow: inset 0px 7px 0px #ca4d17;
+          box-shadow: inset 0px 7px 0px #ca4d17;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  margin-top: 200px;
+}
+
+.uranus {
+  background: -webkit-gradient(linear, left top, right top, from(#337799), to(#2a627e));
+  background: linear-gradient(90deg, #337799, #2a627e);
+  -webkit-box-shadow: inset 0px 7px 0px #24536b;
+          box-shadow: inset 0px 7px 0px #24536b;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  margin-top: 240px;
+}
+
+.neptune {
+  background: -webkit-gradient(linear, left top, right top, from(#6ACDC0), to(#4fc4b5));
+  background: linear-gradient(90deg, #6ACDC0, #4fc4b5);
+  -webkit-box-shadow: inset 0px 7px 0px #38a899;
+          box-shadow: inset 0px 7px 0px #38a899;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  margin-top: 280px;
+}
+
+.pluto {
+  background: -webkit-gradient(linear, left top, right top, from(#C6C053), to(#b8b23d));
+  background: linear-gradient(90deg, #C6C053, #b8b23d);
+  -webkit-box-shadow: inset 0px 7px 0px #a59f37;
+          box-shadow: inset 0px 7px 0px #a59f37;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  margin-top: 320px;
+}
+
+[class*="-orbit"] {
+  position: absolute;
+  left: 0;
+  right: 0;
+  border: 1px solid;
+  -webkit-box-shadow: 0px 1px 1px #4096EE;
+          box-shadow: 0px 1px 1px #4096EE;
+  border-radius: 100%;
+}
+
+.mercurys-orbit {
+  width: 100px;
+  height: 100px;
+  margin: 85px auto;
+  -webkit-animation: gravity 0.60057s linear infinite;
+          animation: gravity 0.60057s linear infinite;
+}
+
+.venus-orbit {
+  width: 170px;
+  height: 170px;
+  margin: 50px auto;
+  -webkit-animation: gravity 3.3365s linear infinite;
+          animation: gravity 3.3365s linear infinite;
+}
+
+.earths-orbit {
+  width: 270px;
+  height: 270px;
+  margin: 0px auto;
+  -webkit-animation: gravity 6.673s linear infinite;
+          animation: gravity 6.673s linear infinite;
+}
+
+.mars-orbit {
+  width: 370px;
+  height: 370px;
+  margin: -50px auto;
+  -webkit-animation: gravity 10.0095s linear infinite;
+          animation: gravity 10.0095s linear infinite;
+}
+
+.jupiters-orbit {
+  width: 470px;
+  height: 470px;
+  margin: -100px auto;
+  -webkit-animation: gravity 13.346s linear infinite;
+          animation: gravity 13.346s linear infinite;
+}
+
+.saturns-orbit {
+  width: 570px;
+  height: 570px;
+  margin: -150px auto;
+  -webkit-animation: gravity 20.019s linear infinite;
+          animation: gravity 20.019s linear infinite;
+}
+
+.uranus-orbit {
+  width: 670px;
+  height: 670px;
+  margin: -200px auto;
+  -webkit-animation: gravity 26.692s linear infinite;
+          animation: gravity 26.692s linear infinite;
+}
+
+.neptunes-orbit {
+  width: 770px;
+  height: 770px;
+  margin: -250px auto;
+  -webkit-animation: gravity 33.365s linear infinite;
+          animation: gravity 33.365s linear infinite;
+}
+
+.plutos-orbit {
+  width: 870px;
+  height: 870px;
+  margin: -300px auto;
+  margin-left: -50px;
+  -webkit-animation: gravity 40.038s linear infinite;
+          animation: gravity 40.038s linear infinite;
+}
+
+.star-container {
+  -webkit-animation: gravity 200s linear infinite;
+          animation: gravity 200s linear infinite;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.star {
+  background: #FFF;
+  border-radius: 100px;
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  -webkit-filter: brightness(100);
+          filter: brightness(100);
+}
+
+.star:nth-of-type(1) {
+  margin-left: 2821px;
+  margin-top: 810px;
+  -webkit-animation: flash 7s linear infinite;
+          animation: flash 7s linear infinite;
+}
+
+.star:nth-of-type(2) {
+  margin-left: 292px;
+  margin-top: 112px;
+  -webkit-animation: flash 1s linear infinite;
+          animation: flash 1s linear infinite;
+}
+
+.star:nth-of-type(3) {
+  margin-left: 1992px;
+  margin-top: 9px;
+  -webkit-animation: flash 1s linear infinite;
+          animation: flash 1s linear infinite;
+}
+
+.star:nth-of-type(4) {
+  margin-left: 371px;
+  margin-top: 840px;
+  -webkit-animation: flash 8s linear infinite;
+          animation: flash 8s linear infinite;
+}
+
+.star:nth-of-type(5) {
+  margin-left: 905px;
+  margin-top: 626px;
+  -webkit-animation: flash 6s linear infinite;
+          animation: flash 6s linear infinite;
+}
+
+.star:nth-of-type(6) {
+  margin-left: 2663px;
+  margin-top: 548px;
+  -webkit-animation: flash 6s linear infinite;
+          animation: flash 6s linear infinite;
+}
+
+.star:nth-of-type(7) {
+  margin-left: 3926px;
+  margin-top: 618px;
+  -webkit-animation: flash 7s linear infinite;
+          animation: flash 7s linear infinite;
+}
+
+.star:nth-of-type(8) {
+  margin-left: 728px;
+  margin-top: 151px;
+  -webkit-animation: flash 3s linear infinite;
+          animation: flash 3s linear infinite;
+}
+
+.star:nth-of-type(9) {
+  margin-left: 3122px;
+  margin-top: 32px;
+  -webkit-animation: flash 10s linear infinite;
+          animation: flash 10s linear infinite;
+}
+
+.star:nth-of-type(10) {
+  margin-left: 215px;
+  margin-top: 594px;
+  -webkit-animation: flash 8s linear infinite;
+          animation: flash 8s linear infinite;
+}
+
+.star:nth-of-type(11) {
+  margin-left: 2351px;
+  margin-top: 567px;
+  -webkit-animation: flash 9s linear infinite;
+          animation: flash 9s linear infinite;
+}
+
+.star:nth-of-type(12) {
+  margin-left: 3047px;
+  margin-top: 744px;
+  -webkit-animation: flash 1s linear infinite;
+          animation: flash 1s linear infinite;
+}
+
+.star:nth-of-type(13) {
+  margin-left: 1608px;
+  margin-top: 295px;
+  -webkit-animation: flash 5s linear infinite;
+          animation: flash 5s linear infinite;
+}
+
+.star:nth-of-type(14) {
+  margin-left: 1054px;
+  margin-top: 505px;
+  -webkit-animation: flash 6s linear infinite;
+          animation: flash 6s linear infinite;
+}
+
+.star:nth-of-type(15) {
+  margin-left: 3965px;
+  margin-top: 315px;
+  -webkit-animation: flash 10s linear infinite;
+          animation: flash 10s linear infinite;
+}
+
+.star:nth-of-type(16) {
+  margin-left: 2824px;
+  margin-top: 389px;
+  -webkit-animation: flash 4s linear infinite;
+          animation: flash 4s linear infinite;
+}
+
+.star:nth-of-type(17) {
+  margin-left: 3980px;
+  margin-top: 247px;
+  -webkit-animation: flash 7s linear infinite;
+          animation: flash 7s linear infinite;
+}
+
+.star:nth-of-type(18) {
+  margin-left: 2143px;
+  margin-top: 430px;
+  -webkit-animation: flash 10s linear infinite;
+          animation: flash 10s linear infinite;
+}
+
+.star:nth-of-type(19) {
+  margin-left: 3571px;
+  margin-top: 268px;
+  -webkit-animation: flash 6s linear infinite;
+          animation: flash 6s linear infinite;
+}
+
+.star:nth-of-type(20) {
+  margin-left: 1127px;
+  margin-top: 401px;
+  -webkit-animation: flash 10s linear infinite;
+          animation: flash 10s linear infinite;
+}
+
+.star:nth-of-type(21) {
+  margin-left: 2461px;
+  margin-top: 484px;
+  -webkit-animation: flash 6s linear infinite;
+          animation: flash 6s linear infinite;
+}
+
+.star:nth-of-type(22) {
+  margin-left: 2153px;
+  margin-top: 303px;
+  -webkit-animation: flash 9s linear infinite;
+          animation: flash 9s linear infinite;
+}
+
+.star:nth-of-type(23) {
+  margin-left: 1057px;
+  margin-top: 154px;
+  -webkit-animation: flash 8s linear infinite;
+          animation: flash 8s linear infinite;
+}
+
+.star:nth-of-type(24) {
+  margin-left: 1100px;
+  margin-top: 272px;
+  -webkit-animation: flash 9s linear infinite;
+          animation: flash 9s linear infinite;
+}
+
+.star:nth-of-type(25) {
+  margin-left: 3653px;
+  margin-top: 587px;
+  -webkit-animation: flash 6s linear infinite;
+          animation: flash 6s linear infinite;
+}
+
+.star:nth-of-type(26) {
+  margin-left: 3319px;
+  margin-top: 99px;
+  -webkit-animation: flash 10s linear infinite;
+          animation: flash 10s linear infinite;
+}
+
+.star:nth-of-type(27) {
+  margin-left: 3504px;
+  margin-top: 271px;
+  -webkit-animation: flash 5s linear infinite;
+          animation: flash 5s linear infinite;
+}
+
+.star:nth-of-type(28) {
+  margin-left: 1215px;
+  margin-top: 203px;
+  -webkit-animation: flash 2s linear infinite;
+          animation: flash 2s linear infinite;
+}
+
+.star:nth-of-type(29) {
+  margin-left: 1279px;
+  margin-top: 375px;
+  -webkit-animation: flash 4s linear infinite;
+          animation: flash 4s linear infinite;
+}
+
+.star:nth-of-type(30) {
+  margin-left: 3457px;
+  margin-top: 670px;
+  -webkit-animation: flash 10s linear infinite;
+          animation: flash 10s linear infinite;
+}
+
+.star:nth-of-type(31) {
+  margin-left: 3160px;
+  margin-top: 628px;
+  -webkit-animation: flash 1s linear infinite;
+          animation: flash 1s linear infinite;
+}
+
+.star:nth-of-type(32) {
+  margin-left: 3505px;
+  margin-top: 411px;
+  -webkit-animation: flash 10s linear infinite;
+          animation: flash 10s linear infinite;
+}
+
+.star:nth-of-type(33) {
+  margin-left: 3842px;
+  margin-top: 881px;
+  -webkit-animation: flash 10s linear infinite;
+          animation: flash 10s linear infinite;
+}
+
+.star:nth-of-type(34) {
+  margin-left: 2573px;
+  margin-top: 574px;
+  -webkit-animation: flash 1s linear infinite;
+          animation: flash 1s linear infinite;
+}
+
+.star:nth-of-type(35) {
+  margin-left: 989px;
+  margin-top: 53px;
+  -webkit-animation: flash 6s linear infinite;
+          animation: flash 6s linear infinite;
+}
+
+.star:nth-of-type(36) {
+  margin-left: 1485px;
+  margin-top: 115px;
+  -webkit-animation: flash 10s linear infinite;
+          animation: flash 10s linear infinite;
+}
+
+.star:nth-of-type(37) {
+  margin-left: 1526px;
+  margin-top: 756px;
+  -webkit-animation: flash 10s linear infinite;
+          animation: flash 10s linear infinite;
+}
+
+.star:nth-of-type(38) {
+  margin-left: 2358px;
+  margin-top: 555px;
+  -webkit-animation: flash 2s linear infinite;
+          animation: flash 2s linear infinite;
+}
+
+.star:nth-of-type(39) {
+  margin-left: 410px;
+  margin-top: 497px;
+  -webkit-animation: flash 5s linear infinite;
+          animation: flash 5s linear infinite;
+}
+
+.star:nth-of-type(40) {
+  margin-left: 2154px;
+  margin-top: 277px;
+  -webkit-animation: flash 1s linear infinite;
+          animation: flash 1s linear infinite;
+}
+
+.star:nth-of-type(41) {
+  margin-left: 3082px;
+  margin-top: 398px;
+  -webkit-animation: flash 4s linear infinite;
+          animation: flash 4s linear infinite;
+}
+
+.star:nth-of-type(42) {
+  margin-left: 3664px;
+  margin-top: 541px;
+  -webkit-animation: flash 10s linear infinite;
+          animation: flash 10s linear infinite;
+}
+
+.star:nth-of-type(43) {
+  margin-left: 2277px;
+  margin-top: 346px;
+  -webkit-animation: flash 2s linear infinite;
+          animation: flash 2s linear infinite;
+}
+
+.star:nth-of-type(44) {
+  margin-left: 3318px;
+  margin-top: 104px;
+  -webkit-animation: flash 9s linear infinite;
+          animation: flash 9s linear infinite;
+}
+
+.star:nth-of-type(45) {
+  margin-left: 532px;
+  margin-top: 403px;
+  -webkit-animation: flash 4s linear infinite;
+          animation: flash 4s linear infinite;
+}
+
+.star:nth-of-type(46) {
+  margin-left: 137px;
+  margin-top: 707px;
+  -webkit-animation: flash 2s linear infinite;
+          animation: flash 2s linear infinite;
+}
+
+.star:nth-of-type(47) {
+  margin-left: 3517px;
+  margin-top: 30px;
+  -webkit-animation: flash 2s linear infinite;
+          animation: flash 2s linear infinite;
+}
+
+.star:nth-of-type(48) {
+  margin-left: 2517px;
+  margin-top: 721px;
+  -webkit-animation: flash 8s linear infinite;
+          animation: flash 8s linear infinite;
+}
+
+.star:nth-of-type(49) {
+  margin-left: 2175px;
+  margin-top: 881px;
+  -webkit-animation: flash 2s linear infinite;
+          animation: flash 2s linear infinite;
+}
+
+.star:nth-of-type(50) {
+  margin-left: 3220px;
+  margin-top: 369px;
+  -webkit-animation: flash 2s linear infinite;
+          animation: flash 2s linear infinite;
+}
+
+.star:nth-of-type(51) {
+  margin-left: 3764px;
+  margin-top: 261px;
+  -webkit-animation: flash 1s linear infinite;
+          animation: flash 1s linear infinite;
+}
+
+.star:nth-of-type(52) {
+  margin-left: 152px;
+  margin-top: 449px;
+  -webkit-animation: flash 6s linear infinite;
+          animation: flash 6s linear infinite;
+}
+
+.star:nth-of-type(53) {
+  margin-left: 2774px;
+  margin-top: 635px;
+  -webkit-animation: flash 2s linear infinite;
+          animation: flash 2s linear infinite;
+}
+
+.star:nth-of-type(54) {
+  margin-left: 3880px;
+  margin-top: 249px;
+  -webkit-animation: flash 3s linear infinite;
+          animation: flash 3s linear infinite;
+}
+
+.star:nth-of-type(55) {
+  margin-left: 1847px;
+  margin-top: 747px;
+  -webkit-animation: flash 10s linear infinite;
+          animation: flash 10s linear infinite;
+}
+
+.star:nth-of-type(56) {
+  margin-left: 199px;
+  margin-top: 603px;
+  -webkit-animation: flash 4s linear infinite;
+          animation: flash 4s linear infinite;
+}
+
+.star:nth-of-type(57) {
+  margin-left: 111px;
+  margin-top: 29px;
+  -webkit-animation: flash 6s linear infinite;
+          animation: flash 6s linear infinite;
+}
+
+.star:nth-of-type(58) {
+  margin-left: 3730px;
+  margin-top: 211px;
+  -webkit-animation: flash 2s linear infinite;
+          animation: flash 2s linear infinite;
+}
+
+.star:nth-of-type(59) {
+  margin-left: 3298px;
+  margin-top: 766px;
+  -webkit-animation: flash 7s linear infinite;
+          animation: flash 7s linear infinite;
+}
+
+.star:nth-of-type(60) {
+  margin-left: 402px;
+  margin-top: 51px;
+  -webkit-animation: flash 5s linear infinite;
+          animation: flash 5s linear infinite;
+}
+
+.star:nth-of-type(61) {
+  margin-left: 3843px;
+  margin-top: 781px;
+  -webkit-animation: flash 3s linear infinite;
+          animation: flash 3s linear infinite;
+}
+
+.star:nth-of-type(62) {
+  margin-left: 1524px;
+  margin-top: 737px;
+  -webkit-animation: flash 1s linear infinite;
+          animation: flash 1s linear infinite;
+}
+
+.star:nth-of-type(63) {
+  margin-left: 894px;
+  margin-top: 297px;
+  -webkit-animation: flash 7s linear infinite;
+          animation: flash 7s linear infinite;
+}
+
+.star:nth-of-type(64) {
+  margin-left: 205px;
+  margin-top: 216px;
+  -webkit-animation: flash 10s linear infinite;
+          animation: flash 10s linear infinite;
+}
+
+.star:nth-of-type(65) {
+  margin-left: 2441px;
+  margin-top: 865px;
+  -webkit-animation: flash 7s linear infinite;
+          animation: flash 7s linear infinite;
+}
+
+.star:nth-of-type(66) {
+  margin-left: 2604px;
+  margin-top: 774px;
+  -webkit-animation: flash 10s linear infinite;
+          animation: flash 10s linear infinite;
+}
+
+.star:nth-of-type(67) {
+  margin-left: 2115px;
+  margin-top: 791px;
+  -webkit-animation: flash 7s linear infinite;
+          animation: flash 7s linear infinite;
+}
+
+.star:nth-of-type(68) {
+  margin-left: 2238px;
+  margin-top: 212px;
+  -webkit-animation: flash 6s linear infinite;
+          animation: flash 6s linear infinite;
+}
+
+.star:nth-of-type(69) {
+  margin-left: 720px;
+  margin-top: 538px;
+  -webkit-animation: flash 4s linear infinite;
+          animation: flash 4s linear infinite;
+}
+
+.star:nth-of-type(70) {
+  margin-left: 3629px;
+  margin-top: 789px;
+  -webkit-animation: flash 10s linear infinite;
+          animation: flash 10s linear infinite;
+}
+
+.star:nth-of-type(71) {
+  margin-left: 862px;
+  margin-top: 66px;
+  -webkit-animation: flash 9s linear infinite;
+          animation: flash 9s linear infinite;
+}
+
+.star:nth-of-type(72) {
+  margin-left: 638px;
+  margin-top: 234px;
+  -webkit-animation: flash 1s linear infinite;
+          animation: flash 1s linear infinite;
+}
+
+.star:nth-of-type(73) {
+  margin-left: 1210px;
+  margin-top: 690px;
+  -webkit-animation: flash 2s linear infinite;
+          animation: flash 2s linear infinite;
+}
+
+.star:nth-of-type(74) {
+  margin-left: 29px;
+  margin-top: 250px;
+  -webkit-animation: flash 5s linear infinite;
+          animation: flash 5s linear infinite;
+}
+
+.star:nth-of-type(75) {
+  margin-left: 73px;
+  margin-top: 580px;
+  -webkit-animation: flash 5s linear infinite;
+          animation: flash 5s linear infinite;
+}
+
+.star:nth-of-type(76) {
+  margin-left: 2068px;
+  margin-top: 29px;
+  -webkit-animation: flash 4s linear infinite;
+          animation: flash 4s linear infinite;
+}
+
+.star:nth-of-type(77) {
+  margin-left: 3426px;
+  margin-top: 129px;
+  -webkit-animation: flash 10s linear infinite;
+          animation: flash 10s linear infinite;
+}
+
+.star:nth-of-type(78) {
+  margin-left: 3740px;
+  margin-top: 788px;
+  -webkit-animation: flash 7s linear infinite;
+          animation: flash 7s linear infinite;
+}
+
+.star:nth-of-type(79) {
+  margin-left: 3970px;
+  margin-top: 521px;
+  -webkit-animation: flash 6s linear infinite;
+          animation: flash 6s linear infinite;
+}
+
+.star:nth-of-type(80) {
+  margin-left: 1342px;
+  margin-top: 333px;
+  -webkit-animation: flash 5s linear infinite;
+          animation: flash 5s linear infinite;
+}
+
+.star:nth-of-type(81) {
+  margin-left: 3475px;
+  margin-top: 357px;
+  -webkit-animation: flash 1s linear infinite;
+          animation: flash 1s linear infinite;
+}
+
+.star:nth-of-type(82) {
+  margin-left: 2041px;
+  margin-top: 243px;
+  -webkit-animation: flash 4s linear infinite;
+          animation: flash 4s linear infinite;
+}
+
+.star:nth-of-type(83) {
+  margin-left: 685px;
+  margin-top: 67px;
+  -webkit-animation: flash 6s linear infinite;
+          animation: flash 6s linear infinite;
+}
+
+.star:nth-of-type(84) {
+  margin-left: 31px;
+  margin-top: 332px;
+  -webkit-animation: flash 7s linear infinite;
+          animation: flash 7s linear infinite;
+}
+
+.star:nth-of-type(85) {
+  margin-left: 2113px;
+  margin-top: 235px;
+  -webkit-animation: flash 3s linear infinite;
+          animation: flash 3s linear infinite;
+}
+
+.star:nth-of-type(86) {
+  margin-left: 2908px;
+  margin-top: 891px;
+  -webkit-animation: flash 10s linear infinite;
+          animation: flash 10s linear infinite;
+}
+
+.star:nth-of-type(87) {
+  margin-left: 2318px;
+  margin-top: 91px;
+  -webkit-animation: flash 10s linear infinite;
+          animation: flash 10s linear infinite;
+}
+
+.star:nth-of-type(88) {
+  margin-left: 1214px;
+  margin-top: 148px;
+  -webkit-animation: flash 3s linear infinite;
+          animation: flash 3s linear infinite;
+}
+
+.star:nth-of-type(89) {
+  margin-left: 1520px;
+  margin-top: 539px;
+  -webkit-animation: flash 9s linear infinite;
+          animation: flash 9s linear infinite;
+}
+
+.star:nth-of-type(90) {
+  margin-left: 3680px;
+  margin-top: 734px;
+  -webkit-animation: flash 10s linear infinite;
+          animation: flash 10s linear infinite;
+}
+
+.star:nth-of-type(91) {
+  margin-left: 3532px;
+  margin-top: 758px;
+  -webkit-animation: flash 7s linear infinite;
+          animation: flash 7s linear infinite;
+}
+
+.star:nth-of-type(92) {
+  margin-left: 1805px;
+  margin-top: 325px;
+  -webkit-animation: flash 10s linear infinite;
+          animation: flash 10s linear infinite;
+}
+
+.star:nth-of-type(93) {
+  margin-left: 2930px;
+  margin-top: 183px;
+  -webkit-animation: flash 9s linear infinite;
+          animation: flash 9s linear infinite;
+}
+
+.star:nth-of-type(94) {
+  margin-left: 2644px;
+  margin-top: 15px;
+  -webkit-animation: flash 5s linear infinite;
+          animation: flash 5s linear infinite;
+}
+
+.star:nth-of-type(95) {
+  margin-left: 3466px;
+  margin-top: 760px;
+  -webkit-animation: flash 7s linear infinite;
+          animation: flash 7s linear infinite;
+}
+
+.star:nth-of-type(96) {
+  margin-left: 2845px;
+  margin-top: 752px;
+  -webkit-animation: flash 6s linear infinite;
+          animation: flash 6s linear infinite;
+}
+
+.star:nth-of-type(97) {
+  margin-left: 3622px;
+  margin-top: 800px;
+  -webkit-animation: flash 8s linear infinite;
+          animation: flash 8s linear infinite;
+}
+
+.star:nth-of-type(98) {
+  margin-left: 3442px;
+  margin-top: 397px;
+  -webkit-animation: flash 3s linear infinite;
+          animation: flash 3s linear infinite;
+}
+
+.star:nth-of-type(99) {
+  margin-left: 10px;
+  margin-top: 111px;
+  -webkit-animation: flash 10s linear infinite;
+          animation: flash 10s linear infinite;
+}
+
+.star:nth-of-type(100) {
+  margin-left: 3490px;
+  margin-top: 105px;
+  -webkit-animation: flash 8s linear infinite;
+          animation: flash 8s linear infinite;
+}
+
+.star:nth-of-type(101) {
+  margin-left: 872px;
+  margin-top: 658px;
+  -webkit-animation: flash 10s linear infinite;
+          animation: flash 10s linear infinite;
+}
+
+.star:nth-of-type(102) {
+  margin-left: 1568px;
+  margin-top: 36px;
+  -webkit-animation: flash 3s linear infinite;
+          animation: flash 3s linear infinite;
+}
+
+.star:nth-of-type(103) {
+  margin-left: 2992px;
+  margin-top: 768px;
+  -webkit-animation: flash 3s linear infinite;
+          animation: flash 3s linear infinite;
+}
+
+.star:nth-of-type(104) {
+  margin-left: 1309px;
+  margin-top: 440px;
+  -webkit-animation: flash 9s linear infinite;
+          animation: flash 9s linear infinite;
+}
+
+.star:nth-of-type(105) {
+  margin-left: 1213px;
+  margin-top: 625px;
+  -webkit-animation: flash 5s linear infinite;
+          animation: flash 5s linear infinite;
+}
+
+.star:nth-of-type(106) {
+  margin-left: 3898px;
+  margin-top: 895px;
+  -webkit-animation: flash 7s linear infinite;
+          animation: flash 7s linear infinite;
+}
+
+.star:nth-of-type(107) {
+  margin-left: 1684px;
+  margin-top: 365px;
+  -webkit-animation: flash 9s linear infinite;
+          animation: flash 9s linear infinite;
+}
+
+.star:nth-of-type(108) {
+  margin-left: 1324px;
+  margin-top: 537px;
+  -webkit-animation: flash 9s linear infinite;
+          animation: flash 9s linear infinite;
+}
+
+.star:nth-of-type(109) {
+  margin-left: 2750px;
+  margin-top: 584px;
+  -webkit-animation: flash 10s linear infinite;
+          animation: flash 10s linear infinite;
+}
+
+.star:nth-of-type(110) {
+  margin-left: 2792px;
+  margin-top: 519px;
+  -webkit-animation: flash 2s linear infinite;
+          animation: flash 2s linear infinite;
+}
+
+.star:nth-of-type(111) {
+  margin-left: 1732px;
+  margin-top: 323px;
+  -webkit-animation: flash 5s linear infinite;
+          animation: flash 5s linear infinite;
+}
+
+.star:nth-of-type(112) {
+  margin-left: 3534px;
+  margin-top: 263px;
+  -webkit-animation: flash 9s linear infinite;
+          animation: flash 9s linear infinite;
+}
+
+.star:nth-of-type(113) {
+  margin-left: 3730px;
+  margin-top: 701px;
+  -webkit-animation: flash 7s linear infinite;
+          animation: flash 7s linear infinite;
+}
+
+.star:nth-of-type(114) {
+  margin-left: 526px;
+  margin-top: 183px;
+  -webkit-animation: flash 9s linear infinite;
+          animation: flash 9s linear infinite;
+}
+
+.star:nth-of-type(115) {
+  margin-left: 3680px;
+  margin-top: 70px;
+  -webkit-animation: flash 3s linear infinite;
+          animation: flash 3s linear infinite;
+}
+
+.star:nth-of-type(116) {
+  margin-left: 521px;
+  margin-top: 863px;
+  -webkit-animation: flash 8s linear infinite;
+          animation: flash 8s linear infinite;
+}
+
+.star:nth-of-type(117) {
+  margin-left: 1197px;
+  margin-top: 596px;
+  -webkit-animation: flash 8s linear infinite;
+          animation: flash 8s linear infinite;
+}
+
+.star:nth-of-type(118) {
+  margin-left: 1245px;
+  margin-top: 816px;
+  -webkit-animation: flash 2s linear infinite;
+          animation: flash 2s linear infinite;
+}
+
+.star:nth-of-type(119) {
+  margin-left: 2615px;
+  margin-top: 217px;
+  -webkit-animation: flash 10s linear infinite;
+          animation: flash 10s linear infinite;
+}
+
+.star:nth-of-type(120) {
+  margin-left: 1008px;
+  margin-top: 722px;
+  -webkit-animation: flash 6s linear infinite;
+          animation: flash 6s linear infinite;
+}
+
+.star:nth-of-type(121) {
+  margin-left: 2999px;
+  margin-top: 222px;
+  -webkit-animation: flash 5s linear infinite;
+          animation: flash 5s linear infinite;
+}
+
+.star:nth-of-type(122) {
+  margin-left: 1331px;
+  margin-top: 322px;
+  -webkit-animation: flash 10s linear infinite;
+          animation: flash 10s linear infinite;
+}
+
+.star:nth-of-type(123) {
+  margin-left: 2005px;
+  margin-top: 534px;
+  -webkit-animation: flash 7s linear infinite;
+          animation: flash 7s linear infinite;
+}
+
+.star:nth-of-type(124) {
+  margin-left: 7px;
+  margin-top: 597px;
+  -webkit-animation: flash 8s linear infinite;
+          animation: flash 8s linear infinite;
+}
+
+.star:nth-of-type(125) {
+  margin-left: 241px;
+  margin-top: 616px;
+  -webkit-animation: flash 9s linear infinite;
+          animation: flash 9s linear infinite;
+}
+
+.star:nth-of-type(126) {
+  margin-left: 3072px;
+  margin-top: 307px;
+  -webkit-animation: flash 3s linear infinite;
+          animation: flash 3s linear infinite;
+}
+
+.star:nth-of-type(127) {
+  margin-left: 1988px;
+  margin-top: 319px;
+  -webkit-animation: flash 8s linear infinite;
+          animation: flash 8s linear infinite;
+}
+
+.star:nth-of-type(128) {
+  margin-left: 39px;
+  margin-top: 378px;
+  -webkit-animation: flash 6s linear infinite;
+          animation: flash 6s linear infinite;
+}
+
+.star:nth-of-type(129) {
+  margin-left: 1435px;
+  margin-top: 824px;
+  -webkit-animation: flash 4s linear infinite;
+          animation: flash 4s linear infinite;
+}
+
+.star:nth-of-type(130) {
+  margin-left: 3519px;
+  margin-top: 427px;
+  -webkit-animation: flash 4s linear infinite;
+          animation: flash 4s linear infinite;
+}
+
+.star:nth-of-type(131) {
+  margin-left: 2073px;
+  margin-top: 402px;
+  -webkit-animation: flash 9s linear infinite;
+          animation: flash 9s linear infinite;
+}
+
+.star:nth-of-type(132) {
+  margin-left: 2691px;
+  margin-top: 900px;
+  -webkit-animation: flash 7s linear infinite;
+          animation: flash 7s linear infinite;
+}
+
+.star:nth-of-type(133) {
+  margin-left: 1678px;
+  margin-top: 558px;
+  -webkit-animation: flash 9s linear infinite;
+          animation: flash 9s linear infinite;
+}
+
+.star:nth-of-type(134) {
+  margin-left: 2425px;
+  margin-top: 92px;
+  -webkit-animation: flash 3s linear infinite;
+          animation: flash 3s linear infinite;
+}
+
+.star:nth-of-type(135) {
+  margin-left: 2095px;
+  margin-top: 882px;
+  -webkit-animation: flash 10s linear infinite;
+          animation: flash 10s linear infinite;
+}
+
+.star:nth-of-type(136) {
+  margin-left: 1587px;
+  margin-top: 48px;
+  -webkit-animation: flash 1s linear infinite;
+          animation: flash 1s linear infinite;
+}
+
+.star:nth-of-type(137) {
+  margin-left: 1148px;
+  margin-top: 513px;
+  -webkit-animation: flash 6s linear infinite;
+          animation: flash 6s linear infinite;
+}
+
+.star:nth-of-type(138) {
+  margin-left: 3694px;
+  margin-top: 129px;
+  -webkit-animation: flash 2s linear infinite;
+          animation: flash 2s linear infinite;
+}
+
+.star:nth-of-type(139) {
+  margin-left: 3989px;
+  margin-top: 860px;
+  -webkit-animation: flash 4s linear infinite;
+          animation: flash 4s linear infinite;
+}
+
+.star:nth-of-type(140) {
+  margin-left: 2573px;
+  margin-top: 629px;
+  -webkit-animation: flash 6s linear infinite;
+          animation: flash 6s linear infinite;
+}
+
+.star:nth-of-type(141) {
+  margin-left: 124px;
+  margin-top: 593px;
+  -webkit-animation: flash 10s linear infinite;
+          animation: flash 10s linear infinite;
+}
+
+.star:nth-of-type(142) {
+  margin-left: 3827px;
+  margin-top: 626px;
+  -webkit-animation: flash 3s linear infinite;
+          animation: flash 3s linear infinite;
+}
+
+.star:nth-of-type(143) {
+  margin-left: 337px;
+  margin-top: 308px;
+  -webkit-animation: flash 10s linear infinite;
+          animation: flash 10s linear infinite;
+}
+
+.star:nth-of-type(144) {
+  margin-left: 2356px;
+  margin-top: 717px;
+  -webkit-animation: flash 10s linear infinite;
+          animation: flash 10s linear infinite;
+}
+
+.star:nth-of-type(145) {
+  margin-left: 185px;
+  margin-top: 162px;
+  -webkit-animation: flash 10s linear infinite;
+          animation: flash 10s linear infinite;
+}
+
+.star:nth-of-type(146) {
+  margin-left: 132px;
+  margin-top: 127px;
+  -webkit-animation: flash 4s linear infinite;
+          animation: flash 4s linear infinite;
+}
+
+.star:nth-of-type(147) {
+  margin-left: 3986px;
+  margin-top: 863px;
+  -webkit-animation: flash 1s linear infinite;
+          animation: flash 1s linear infinite;
+}
+
+.star:nth-of-type(148) {
+  margin-left: 511px;
+  margin-top: 357px;
+  -webkit-animation: flash 9s linear infinite;
+          animation: flash 9s linear infinite;
+}
+
+.star:nth-of-type(149) {
+  margin-left: 3741px;
+  margin-top: 789px;
+  -webkit-animation: flash 1s linear infinite;
+          animation: flash 1s linear infinite;
+}
+
+.star:nth-of-type(150) {
+  margin-left: 921px;
+  margin-top: 598px;
+  -webkit-animation: flash 3s linear infinite;
+          animation: flash 3s linear infinite;
+}
+
+.star:nth-of-type(151) {
+  margin-left: 2810px;
+  margin-top: 693px;
+  -webkit-animation: flash 3s linear infinite;
+          animation: flash 3s linear infinite;
+}
+
+.star:nth-of-type(152) {
+  margin-left: 350px;
+  margin-top: 450px;
+  -webkit-animation: flash 10s linear infinite;
+          animation: flash 10s linear infinite;
+}
+
+.star:nth-of-type(153) {
+  margin-left: 2851px;
+  margin-top: 436px;
+  -webkit-animation: flash 2s linear infinite;
+          animation: flash 2s linear infinite;
+}
+
+.star:nth-of-type(154) {
+  margin-left: 1226px;
+  margin-top: 29px;
+  -webkit-animation: flash 10s linear infinite;
+          animation: flash 10s linear infinite;
+}
+
+.star:nth-of-type(155) {
+  margin-left: 481px;
+  margin-top: 600px;
+  -webkit-animation: flash 8s linear infinite;
+          animation: flash 8s linear infinite;
+}
+
+.star:nth-of-type(156) {
+  margin-left: 1194px;
+  margin-top: 520px;
+  -webkit-animation: flash 1s linear infinite;
+          animation: flash 1s linear infinite;
+}
+
+.star:nth-of-type(157) {
+  margin-left: 3859px;
+  margin-top: 120px;
+  -webkit-animation: flash 1s linear infinite;
+          animation: flash 1s linear infinite;
+}
+
+.star:nth-of-type(158) {
+  margin-left: 847px;
+  margin-top: 651px;
+  -webkit-animation: flash 3s linear infinite;
+          animation: flash 3s linear infinite;
+}
+
+.star:nth-of-type(159) {
+  margin-left: 3466px;
+  margin-top: 259px;
+  -webkit-animation: flash 8s linear infinite;
+          animation: flash 8s linear infinite;
+}
+
+.star:nth-of-type(160) {
+  margin-left: 2018px;
+  margin-top: 25px;
+  -webkit-animation: flash 4s linear infinite;
+          animation: flash 4s linear infinite;
+}
+
+.star:nth-of-type(161) {
+  margin-left: 3445px;
+  margin-top: 442px;
+  -webkit-animation: flash 10s linear infinite;
+          animation: flash 10s linear infinite;
+}
+
+.star:nth-of-type(162) {
+  margin-left: 784px;
+  margin-top: 504px;
+  -webkit-animation: flash 5s linear infinite;
+          animation: flash 5s linear infinite;
+}
+
+.star:nth-of-type(163) {
+  margin-left: 3059px;
+  margin-top: 571px;
+  -webkit-animation: flash 4s linear infinite;
+          animation: flash 4s linear infinite;
+}
+
+.star:nth-of-type(164) {
+  margin-left: 2987px;
+  margin-top: 554px;
+  -webkit-animation: flash 6s linear infinite;
+          animation: flash 6s linear infinite;
+}
+
+.star:nth-of-type(165) {
+  margin-left: 1756px;
+  margin-top: 30px;
+  -webkit-animation: flash 7s linear infinite;
+          animation: flash 7s linear infinite;
+}
+
+.star:nth-of-type(166) {
+  margin-left: 2900px;
+  margin-top: 637px;
+  -webkit-animation: flash 1s linear infinite;
+          animation: flash 1s linear infinite;
+}
+
+.star:nth-of-type(167) {
+  margin-left: 2527px;
+  margin-top: 602px;
+  -webkit-animation: flash 7s linear infinite;
+          animation: flash 7s linear infinite;
+}
+
+.star:nth-of-type(168) {
+  margin-left: 114px;
+  margin-top: 503px;
+  -webkit-animation: flash 4s linear infinite;
+          animation: flash 4s linear infinite;
+}
+
+.star:nth-of-type(169) {
+  margin-left: 3636px;
+  margin-top: 243px;
+  -webkit-animation: flash 8s linear infinite;
+          animation: flash 8s linear infinite;
+}
+
+.star:nth-of-type(170) {
+  margin-left: 2131px;
+  margin-top: 221px;
+  -webkit-animation: flash 7s linear infinite;
+          animation: flash 7s linear infinite;
+}
+
+.star:nth-of-type(171) {
+  margin-left: 161px;
+  margin-top: 797px;
+  -webkit-animation: flash 4s linear infinite;
+          animation: flash 4s linear infinite;
+}
+
+.star:nth-of-type(172) {
+  margin-left: 2375px;
+  margin-top: 73px;
+  -webkit-animation: flash 5s linear infinite;
+          animation: flash 5s linear infinite;
+}
+
+.star:nth-of-type(173) {
+  margin-left: 950px;
+  margin-top: 820px;
+  -webkit-animation: flash 1s linear infinite;
+          animation: flash 1s linear infinite;
+}
+
+.star:nth-of-type(174) {
+  margin-left: 644px;
+  margin-top: 412px;
+  -webkit-animation: flash 1s linear infinite;
+          animation: flash 1s linear infinite;
+}
+
+.star:nth-of-type(175) {
+  margin-left: 3209px;
+  margin-top: 859px;
+  -webkit-animation: flash 1s linear infinite;
+          animation: flash 1s linear infinite;
+}
+
+.star:nth-of-type(176) {
+  margin-left: 652px;
+  margin-top: 208px;
+  -webkit-animation: flash 9s linear infinite;
+          animation: flash 9s linear infinite;
+}
+
+.star:nth-of-type(177) {
+  margin-left: 1164px;
+  margin-top: 604px;
+  -webkit-animation: flash 10s linear infinite;
+          animation: flash 10s linear infinite;
+}
+
+.star:nth-of-type(178) {
+  margin-left: 2907px;
+  margin-top: 397px;
+  -webkit-animation: flash 3s linear infinite;
+          animation: flash 3s linear infinite;
+}
+
+.star:nth-of-type(179) {
+  margin-left: 2282px;
+  margin-top: 776px;
+  -webkit-animation: flash 5s linear infinite;
+          animation: flash 5s linear infinite;
+}
+
+.star:nth-of-type(180) {
+  margin-left: 946px;
+  margin-top: 745px;
+  -webkit-animation: flash 4s linear infinite;
+          animation: flash 4s linear infinite;
+}
+
+.star:nth-of-type(181) {
+  margin-left: 1918px;
+  margin-top: 122px;
+  -webkit-animation: flash 7s linear infinite;
+          animation: flash 7s linear infinite;
+}
+
+.star:nth-of-type(182) {
+  margin-left: 805px;
+  margin-top: 843px;
+  -webkit-animation: flash 9s linear infinite;
+          animation: flash 9s linear infinite;
+}
+
+.star:nth-of-type(183) {
+  margin-left: 788px;
+  margin-top: 138px;
+  -webkit-animation: flash 2s linear infinite;
+          animation: flash 2s linear infinite;
+}
+
+.star:nth-of-type(184) {
+  margin-left: 2273px;
+  margin-top: 404px;
+  -webkit-animation: flash 8s linear infinite;
+          animation: flash 8s linear infinite;
+}
+
+.star:nth-of-type(185) {
+  margin-left: 1802px;
+  margin-top: 869px;
+  -webkit-animation: flash 1s linear infinite;
+          animation: flash 1s linear infinite;
+}
+
+.star:nth-of-type(186) {
+  margin-left: 3102px;
+  margin-top: 654px;
+  -webkit-animation: flash 10s linear infinite;
+          animation: flash 10s linear infinite;
+}
+
+.star:nth-of-type(187) {
+  margin-left: 2577px;
+  margin-top: 673px;
+  -webkit-animation: flash 5s linear infinite;
+          animation: flash 5s linear infinite;
+}
+
+.star:nth-of-type(188) {
+  margin-left: 1115px;
+  margin-top: 627px;
+  -webkit-animation: flash 1s linear infinite;
+          animation: flash 1s linear infinite;
+}
+
+.star:nth-of-type(189) {
+  margin-left: 1787px;
+  margin-top: 225px;
+  -webkit-animation: flash 9s linear infinite;
+          animation: flash 9s linear infinite;
+}
+
+.star:nth-of-type(190) {
+  margin-left: 2505px;
+  margin-top: 834px;
+  -webkit-animation: flash 4s linear infinite;
+          animation: flash 4s linear infinite;
+}
+
+.star:nth-of-type(191) {
+  margin-left: 3752px;
+  margin-top: 595px;
+  -webkit-animation: flash 1s linear infinite;
+          animation: flash 1s linear infinite;
+}
+
+.star:nth-of-type(192) {
+  margin-left: 3063px;
+  margin-top: 111px;
+  -webkit-animation: flash 2s linear infinite;
+          animation: flash 2s linear infinite;
+}
+
+.star:nth-of-type(193) {
+  margin-left: 223px;
+  margin-top: 608px;
+  -webkit-animation: flash 9s linear infinite;
+          animation: flash 9s linear infinite;
+}
+
+.star:nth-of-type(194) {
+  margin-left: 531px;
+  margin-top: 534px;
+  -webkit-animation: flash 2s linear infinite;
+          animation: flash 2s linear infinite;
+}
+
+.star:nth-of-type(195) {
+  margin-left: 696px;
+  margin-top: 716px;
+  -webkit-animation: flash 9s linear infinite;
+          animation: flash 9s linear infinite;
+}
+
+.star:nth-of-type(196) {
+  margin-left: 393px;
+  margin-top: 216px;
+  -webkit-animation: flash 5s linear infinite;
+          animation: flash 5s linear infinite;
+}
+
+.star:nth-of-type(197) {
+  margin-left: 3661px;
+  margin-top: 643px;
+  -webkit-animation: flash 9s linear infinite;
+          animation: flash 9s linear infinite;
+}
+
+.star:nth-of-type(198) {
+  margin-left: 445px;
+  margin-top: 410px;
+  -webkit-animation: flash 1s linear infinite;
+          animation: flash 1s linear infinite;
+}
+
+.star:nth-of-type(199) {
+  margin-left: 298px;
+  margin-top: 632px;
+  -webkit-animation: flash 10s linear infinite;
+          animation: flash 10s linear infinite;
+}
+
+.star:nth-of-type(200) {
+  margin-left: 3704px;
+  margin-top: 359px;
+  -webkit-animation: flash 9s linear infinite;
+          animation: flash 9s linear infinite;
+}
+
+.star:nth-of-type(201) {
+  margin-left: 3592px;
+  margin-top: 759px;
+  -webkit-animation: flash 2s linear infinite;
+          animation: flash 2s linear infinite;
+}
+
+.star:nth-of-type(202) {
+  margin-left: 2555px;
+  margin-top: 882px;
+  -webkit-animation: flash 9s linear infinite;
+          animation: flash 9s linear infinite;
+}
+
+.star:nth-of-type(203) {
+  margin-left: 3707px;
+  margin-top: 560px;
+  -webkit-animation: flash 5s linear infinite;
+          animation: flash 5s linear infinite;
+}
+
+.star:nth-of-type(204) {
+  margin-left: 1302px;
+  margin-top: 132px;
+  -webkit-animation: flash 10s linear infinite;
+          animation: flash 10s linear infinite;
+}
+
+.star:nth-of-type(205) {
+  margin-left: 3055px;
+  margin-top: 284px;
+  -webkit-animation: flash 2s linear infinite;
+          animation: flash 2s linear infinite;
+}
+
+.star:nth-of-type(206) {
+  margin-left: 2651px;
+  margin-top: 343px;
+  -webkit-animation: flash 1s linear infinite;
+          animation: flash 1s linear infinite;
+}
+
+.star:nth-of-type(207) {
+  margin-left: 2401px;
+  margin-top: 152px;
+  -webkit-animation: flash 7s linear infinite;
+          animation: flash 7s linear infinite;
+}
+
+.star:nth-of-type(208) {
+  margin-left: 3639px;
+  margin-top: 468px;
+  -webkit-animation: flash 8s linear infinite;
+          animation: flash 8s linear infinite;
+}
+
+.star:nth-of-type(209) {
+  margin-left: 317px;
+  margin-top: 251px;
+  -webkit-animation: flash 4s linear infinite;
+          animation: flash 4s linear infinite;
+}
+
+.star:nth-of-type(210) {
+  margin-left: 3185px;
+  margin-top: 684px;
+  -webkit-animation: flash 4s linear infinite;
+          animation: flash 4s linear infinite;
+}
+
+.star:nth-of-type(211) {
+  margin-left: 823px;
+  margin-top: 780px;
+  -webkit-animation: flash 1s linear infinite;
+          animation: flash 1s linear infinite;
+}
+
+.star:nth-of-type(212) {
+  margin-left: 2427px;
+  margin-top: 331px;
+  -webkit-animation: flash 4s linear infinite;
+          animation: flash 4s linear infinite;
+}
+
+.star:nth-of-type(213) {
+  margin-left: 1997px;
+  margin-top: 43px;
+  -webkit-animation: flash 6s linear infinite;
+          animation: flash 6s linear infinite;
+}
+
+.star:nth-of-type(214) {
+  margin-left: 97px;
+  margin-top: 62px;
+  -webkit-animation: flash 6s linear infinite;
+          animation: flash 6s linear infinite;
+}
+
+.star:nth-of-type(215) {
+  margin-left: 3206px;
+  margin-top: 493px;
+  -webkit-animation: flash 4s linear infinite;
+          animation: flash 4s linear infinite;
+}
+
+.star:nth-of-type(216) {
+  margin-left: 3267px;
+  margin-top: 330px;
+  -webkit-animation: flash 2s linear infinite;
+          animation: flash 2s linear infinite;
+}
+
+.star:nth-of-type(217) {
+  margin-left: 3217px;
+  margin-top: 189px;
+  -webkit-animation: flash 1s linear infinite;
+          animation: flash 1s linear infinite;
+}
+
+.star:nth-of-type(218) {
+  margin-left: 2153px;
+  margin-top: 301px;
+  -webkit-animation: flash 1s linear infinite;
+          animation: flash 1s linear infinite;
+}
+
+.star:nth-of-type(219) {
+  margin-left: 3803px;
+  margin-top: 567px;
+  -webkit-animation: flash 4s linear infinite;
+          animation: flash 4s linear infinite;
+}
+
+.star:nth-of-type(220) {
+  margin-left: 3137px;
+  margin-top: 524px;
+  -webkit-animation: flash 5s linear infinite;
+          animation: flash 5s linear infinite;
+}
+
+.star:nth-of-type(221) {
+  margin-left: 3088px;
+  margin-top: 178px;
+  -webkit-animation: flash 8s linear infinite;
+          animation: flash 8s linear infinite;
+}
+
+.star:nth-of-type(222) {
+  margin-left: 1749px;
+  margin-top: 786px;
+  -webkit-animation: flash 3s linear infinite;
+          animation: flash 3s linear infinite;
+}
+
+.star:nth-of-type(223) {
+  margin-left: 1341px;
+  margin-top: 510px;
+  -webkit-animation: flash 4s linear infinite;
+          animation: flash 4s linear infinite;
+}
+
+.star:nth-of-type(224) {
+  margin-left: 685px;
+  margin-top: 706px;
+  -webkit-animation: flash 7s linear infinite;
+          animation: flash 7s linear infinite;
+}
+
+.star:nth-of-type(225) {
+  margin-left: 1535px;
+  margin-top: 731px;
+  -webkit-animation: flash 1s linear infinite;
+          animation: flash 1s linear infinite;
+}
+
+.star:nth-of-type(226) {
+  margin-left: 2664px;
+  margin-top: 584px;
+  -webkit-animation: flash 8s linear infinite;
+          animation: flash 8s linear infinite;
+}
+
+.star:nth-of-type(227) {
+  margin-left: 3667px;
+  margin-top: 667px;
+  -webkit-animation: flash 3s linear infinite;
+          animation: flash 3s linear infinite;
+}
+
+.star:nth-of-type(228) {
+  margin-left: 2567px;
+  margin-top: 736px;
+  -webkit-animation: flash 5s linear infinite;
+          animation: flash 5s linear infinite;
+}
+
+.star:nth-of-type(229) {
+  margin-left: 2365px;
+  margin-top: 719px;
+  -webkit-animation: flash 10s linear infinite;
+          animation: flash 10s linear infinite;
+}
+
+.star:nth-of-type(230) {
+  margin-left: 3647px;
+  margin-top: 485px;
+  -webkit-animation: flash 3s linear infinite;
+          animation: flash 3s linear infinite;
+}
+
+.star:nth-of-type(231) {
+  margin-left: 1050px;
+  margin-top: 308px;
+  -webkit-animation: flash 6s linear infinite;
+          animation: flash 6s linear infinite;
+}
+
+.star:nth-of-type(232) {
+  margin-left: 937px;
+  margin-top: 828px;
+  -webkit-animation: flash 8s linear infinite;
+          animation: flash 8s linear infinite;
+}
+
+.star:nth-of-type(233) {
+  margin-left: 2434px;
+  margin-top: 359px;
+  -webkit-animation: flash 6s linear infinite;
+          animation: flash 6s linear infinite;
+}
+
+.star:nth-of-type(234) {
+  margin-left: 1568px;
+  margin-top: 876px;
+  -webkit-animation: flash 4s linear infinite;
+          animation: flash 4s linear infinite;
+}
+
+.star:nth-of-type(235) {
+  margin-left: 2715px;
+  margin-top: 880px;
+  -webkit-animation: flash 9s linear infinite;
+          animation: flash 9s linear infinite;
+}
+
+.star:nth-of-type(236) {
+  margin-left: 2265px;
+  margin-top: 140px;
+  -webkit-animation: flash 9s linear infinite;
+          animation: flash 9s linear infinite;
+}
+
+.star:nth-of-type(237) {
+  margin-left: 2785px;
+  margin-top: 894px;
+  -webkit-animation: flash 7s linear infinite;
+          animation: flash 7s linear infinite;
+}
+
+.star:nth-of-type(238) {
+  margin-left: 2299px;
+  margin-top: 673px;
+  -webkit-animation: flash 1s linear infinite;
+          animation: flash 1s linear infinite;
+}
+
+.star:nth-of-type(239) {
+  margin-left: 2300px;
+  margin-top: 725px;
+  -webkit-animation: flash 9s linear infinite;
+          animation: flash 9s linear infinite;
+}
+
+.star:nth-of-type(240) {
+  margin-left: 3204px;
+  margin-top: 350px;
+  -webkit-animation: flash 3s linear infinite;
+          animation: flash 3s linear infinite;
+}
+
+.star:nth-of-type(241) {
+  margin-left: 314px;
+  margin-top: 303px;
+  -webkit-animation: flash 5s linear infinite;
+          animation: flash 5s linear infinite;
+}
+
+.star:nth-of-type(242) {
+  margin-left: 2824px;
+  margin-top: 480px;
+  -webkit-animation: flash 1s linear infinite;
+          animation: flash 1s linear infinite;
+}
+
+.star:nth-of-type(243) {
+  margin-left: 620px;
+  margin-top: 92px;
+  -webkit-animation: flash 7s linear infinite;
+          animation: flash 7s linear infinite;
+}
+
+.star:nth-of-type(244) {
+  margin-left: 380px;
+  margin-top: 596px;
+  -webkit-animation: flash 10s linear infinite;
+          animation: flash 10s linear infinite;
+}
+
+.star:nth-of-type(245) {
+  margin-left: 605px;
+  margin-top: 639px;
+  -webkit-animation: flash 3s linear infinite;
+          animation: flash 3s linear infinite;
+}
+
+.star:nth-of-type(246) {
+  margin-left: 131px;
+  margin-top: 646px;
+  -webkit-animation: flash 10s linear infinite;
+          animation: flash 10s linear infinite;
+}
+
+.star:nth-of-type(247) {
+  margin-left: 3452px;
+  margin-top: 733px;
+  -webkit-animation: flash 7s linear infinite;
+          animation: flash 7s linear infinite;
+}
+
+.star:nth-of-type(248) {
+  margin-left: 2376px;
+  margin-top: 392px;
+  -webkit-animation: flash 4s linear infinite;
+          animation: flash 4s linear infinite;
+}
+
+.star:nth-of-type(249) {
+  margin-left: 90px;
+  margin-top: 134px;
+  -webkit-animation: flash 5s linear infinite;
+          animation: flash 5s linear infinite;
+}
+
+.star:nth-of-type(250) {
+  margin-left: 3731px;
+  margin-top: 176px;
+  -webkit-animation: flash 4s linear infinite;
+          animation: flash 4s linear infinite;
+}
+
+.star:nth-of-type(251) {
+  margin-left: 557px;
+  margin-top: 840px;
+  -webkit-animation: flash 5s linear infinite;
+          animation: flash 5s linear infinite;
+}
+
+.star:nth-of-type(252) {
+  margin-left: 1714px;
+  margin-top: 453px;
+  -webkit-animation: flash 8s linear infinite;
+          animation: flash 8s linear infinite;
+}
+
+.star:nth-of-type(253) {
+  margin-left: 9px;
+  margin-top: 450px;
+  -webkit-animation: flash 7s linear infinite;
+          animation: flash 7s linear infinite;
+}
+
+.star:nth-of-type(254) {
+  margin-left: 3117px;
+  margin-top: 806px;
+  -webkit-animation: flash 8s linear infinite;
+          animation: flash 8s linear infinite;
+}
+
+.star:nth-of-type(255) {
+  margin-left: 2067px;
+  margin-top: 297px;
+  -webkit-animation: flash 10s linear infinite;
+          animation: flash 10s linear infinite;
+}
+
+.star:nth-of-type(256) {
+  margin-left: 2528px;
+  margin-top: 759px;
+  -webkit-animation: flash 5s linear infinite;
+          animation: flash 5s linear infinite;
+}
+
+.star:nth-of-type(257) {
+  margin-left: 3427px;
+  margin-top: 43px;
+  -webkit-animation: flash 7s linear infinite;
+          animation: flash 7s linear infinite;
+}
+
+.star:nth-of-type(258) {
+  margin-left: 782px;
+  margin-top: 499px;
+  -webkit-animation: flash 6s linear infinite;
+          animation: flash 6s linear infinite;
+}
+
+.star:nth-of-type(259) {
+  margin-left: 3423px;
+  margin-top: 536px;
+  -webkit-animation: flash 3s linear infinite;
+          animation: flash 3s linear infinite;
+}
+
+.star:nth-of-type(260) {
+  margin-left: 2768px;
+  margin-top: 538px;
+  -webkit-animation: flash 10s linear infinite;
+          animation: flash 10s linear infinite;
+}
+
+.star:nth-of-type(261) {
+  margin-left: 2067px;
+  margin-top: 39px;
+  -webkit-animation: flash 3s linear infinite;
+          animation: flash 3s linear infinite;
+}
+
+.star:nth-of-type(262) {
+  margin-left: 2203px;
+  margin-top: 411px;
+  -webkit-animation: flash 10s linear infinite;
+          animation: flash 10s linear infinite;
+}
+
+.star:nth-of-type(263) {
+  margin-left: 1556px;
+  margin-top: 571px;
+  -webkit-animation: flash 3s linear infinite;
+          animation: flash 3s linear infinite;
+}
+
+.star:nth-of-type(264) {
+  margin-left: 2649px;
+  margin-top: 261px;
+  -webkit-animation: flash 5s linear infinite;
+          animation: flash 5s linear infinite;
+}
+
+.star:nth-of-type(265) {
+  margin-left: 1537px;
+  margin-top: 320px;
+  -webkit-animation: flash 10s linear infinite;
+          animation: flash 10s linear infinite;
+}
+
+.star:nth-of-type(266) {
+  margin-left: 151px;
+  margin-top: 559px;
+  -webkit-animation: flash 7s linear infinite;
+          animation: flash 7s linear infinite;
+}
+
+.star:nth-of-type(267) {
+  margin-left: 2190px;
+  margin-top: 786px;
+  -webkit-animation: flash 1s linear infinite;
+          animation: flash 1s linear infinite;
+}
+
+.star:nth-of-type(268) {
+  margin-left: 3210px;
+  margin-top: 35px;
+  -webkit-animation: flash 10s linear infinite;
+          animation: flash 10s linear infinite;
+}
+
+.star:nth-of-type(269) {
+  margin-left: 3846px;
+  margin-top: 886px;
+  -webkit-animation: flash 8s linear infinite;
+          animation: flash 8s linear infinite;
+}
+
+.star:nth-of-type(270) {
+  margin-left: 1117px;
+  margin-top: 17px;
+  -webkit-animation: flash 9s linear infinite;
+          animation: flash 9s linear infinite;
+}
+
+.star:nth-of-type(271) {
+  margin-left: 822px;
+  margin-top: 612px;
+  -webkit-animation: flash 6s linear infinite;
+          animation: flash 6s linear infinite;
+}
+
+.star:nth-of-type(272) {
+  margin-left: 2195px;
+  margin-top: 90px;
+  -webkit-animation: flash 4s linear infinite;
+          animation: flash 4s linear infinite;
+}
+
+.star:nth-of-type(273) {
+  margin-left: 2408px;
+  margin-top: 499px;
+  -webkit-animation: flash 8s linear infinite;
+          animation: flash 8s linear infinite;
+}
+
+.star:nth-of-type(274) {
+  margin-left: 3311px;
+  margin-top: 384px;
+  -webkit-animation: flash 7s linear infinite;
+          animation: flash 7s linear infinite;
+}
+
+.star:nth-of-type(275) {
+  margin-left: 811px;
+  margin-top: 681px;
+  -webkit-animation: flash 3s linear infinite;
+          animation: flash 3s linear infinite;
+}
+
+.star:nth-of-type(276) {
+  margin-left: 2083px;
+  margin-top: 529px;
+  -webkit-animation: flash 8s linear infinite;
+          animation: flash 8s linear infinite;
+}
+
+.star:nth-of-type(277) {
+  margin-left: 3359px;
+  margin-top: 223px;
+  -webkit-animation: flash 1s linear infinite;
+          animation: flash 1s linear infinite;
+}
+
+.star:nth-of-type(278) {
+  margin-left: 3324px;
+  margin-top: 31px;
+  -webkit-animation: flash 4s linear infinite;
+          animation: flash 4s linear infinite;
+}
+
+.star:nth-of-type(279) {
+  margin-left: 1752px;
+  margin-top: 168px;
+  -webkit-animation: flash 10s linear infinite;
+          animation: flash 10s linear infinite;
+}
+
+.star:nth-of-type(280) {
+  margin-left: 1455px;
+  margin-top: 641px;
+  -webkit-animation: flash 7s linear infinite;
+          animation: flash 7s linear infinite;
+}
+
+.star:nth-of-type(281) {
+  margin-left: 2044px;
+  margin-top: 710px;
+  -webkit-animation: flash 4s linear infinite;
+          animation: flash 4s linear infinite;
+}
+
+.star:nth-of-type(282) {
+  margin-left: 1449px;
+  margin-top: 412px;
+  -webkit-animation: flash 1s linear infinite;
+          animation: flash 1s linear infinite;
+}
+
+.star:nth-of-type(283) {
+  margin-left: 3238px;
+  margin-top: 349px;
+  -webkit-animation: flash 9s linear infinite;
+          animation: flash 9s linear infinite;
+}
+
+.star:nth-of-type(284) {
+  margin-left: 2296px;
+  margin-top: 705px;
+  -webkit-animation: flash 3s linear infinite;
+          animation: flash 3s linear infinite;
+}
+
+.star:nth-of-type(285) {
+  margin-left: 3473px;
+  margin-top: 802px;
+  -webkit-animation: flash 7s linear infinite;
+          animation: flash 7s linear infinite;
+}
+
+.star:nth-of-type(286) {
+  margin-left: 512px;
+  margin-top: 388px;
+  -webkit-animation: flash 5s linear infinite;
+          animation: flash 5s linear infinite;
+}
+
+.star:nth-of-type(287) {
+  margin-left: 2438px;
+  margin-top: 766px;
+  -webkit-animation: flash 10s linear infinite;
+          animation: flash 10s linear infinite;
+}
+
+.star:nth-of-type(288) {
+  margin-left: 1268px;
+  margin-top: 33px;
+  -webkit-animation: flash 7s linear infinite;
+          animation: flash 7s linear infinite;
+}
+
+.star:nth-of-type(289) {
+  margin-left: 3040px;
+  margin-top: 258px;
+  -webkit-animation: flash 8s linear infinite;
+          animation: flash 8s linear infinite;
+}
+
+.star:nth-of-type(290) {
+  margin-left: 2797px;
+  margin-top: 84px;
+  -webkit-animation: flash 4s linear infinite;
+          animation: flash 4s linear infinite;
+}
+
+.star:nth-of-type(291) {
+  margin-left: 1643px;
+  margin-top: 285px;
+  -webkit-animation: flash 4s linear infinite;
+          animation: flash 4s linear infinite;
+}
+
+.star:nth-of-type(292) {
+  margin-left: 3460px;
+  margin-top: 251px;
+  -webkit-animation: flash 7s linear infinite;
+          animation: flash 7s linear infinite;
+}
+
+.star:nth-of-type(293) {
+  margin-left: 2107px;
+  margin-top: 863px;
+  -webkit-animation: flash 10s linear infinite;
+          animation: flash 10s linear infinite;
+}
+
+.star:nth-of-type(294) {
+  margin-left: 2782px;
+  margin-top: 479px;
+  -webkit-animation: flash 3s linear infinite;
+          animation: flash 3s linear infinite;
+}
+
+.star:nth-of-type(295) {
+  margin-left: 2081px;
+  margin-top: 134px;
+  -webkit-animation: flash 1s linear infinite;
+          animation: flash 1s linear infinite;
+}
+
+.star:nth-of-type(296) {
+  margin-left: 3004px;
+  margin-top: 724px;
+  -webkit-animation: flash 6s linear infinite;
+          animation: flash 6s linear infinite;
+}
+
+.star:nth-of-type(297) {
+  margin-left: 147px;
+  margin-top: 496px;
+  -webkit-animation: flash 4s linear infinite;
+          animation: flash 4s linear infinite;
+}
+
+.star:nth-of-type(298) {
+  margin-left: 3753px;
+  margin-top: 672px;
+  -webkit-animation: flash 9s linear infinite;
+          animation: flash 9s linear infinite;
+}
+
+.star:nth-of-type(299) {
+  margin-left: 2396px;
+  margin-top: 514px;
+  -webkit-animation: flash 5s linear infinite;
+          animation: flash 5s linear infinite;
+}
+
+.star:nth-of-type(300) {
+  margin-left: 2329px;
+  margin-top: 612px;
+  -webkit-animation: flash 6s linear infinite;
+          animation: flash 6s linear infinite;
+}
+
+.star:nth-of-type(301) {
+  margin-left: 2741px;
+  margin-top: 556px;
+  -webkit-animation: flash 5s linear infinite;
+          animation: flash 5s linear infinite;
+}
+
+.star:nth-of-type(302) {
+  margin-left: 3871px;
+  margin-top: 712px;
+  -webkit-animation: flash 5s linear infinite;
+          animation: flash 5s linear infinite;
+}
+
+.star:nth-of-type(303) {
+  margin-left: 1174px;
+  margin-top: 763px;
+  -webkit-animation: flash 3s linear infinite;
+          animation: flash 3s linear infinite;
+}
+
+.star:nth-of-type(304) {
+  margin-left: 1597px;
+  margin-top: 257px;
+  -webkit-animation: flash 6s linear infinite;
+          animation: flash 6s linear infinite;
+}
+
+.star:nth-of-type(305) {
+  margin-left: 1121px;
+  margin-top: 670px;
+  -webkit-animation: flash 6s linear infinite;
+          animation: flash 6s linear infinite;
+}
+
+.star:nth-of-type(306) {
+  margin-left: 2345px;
+  margin-top: 700px;
+  -webkit-animation: flash 2s linear infinite;
+          animation: flash 2s linear infinite;
+}
+
+.star:nth-of-type(307) {
+  margin-left: 1359px;
+  margin-top: 547px;
+  -webkit-animation: flash 2s linear infinite;
+          animation: flash 2s linear infinite;
+}
+
+.star:nth-of-type(308) {
+  margin-left: 3643px;
+  margin-top: 192px;
+  -webkit-animation: flash 1s linear infinite;
+          animation: flash 1s linear infinite;
+}
+
+.star:nth-of-type(309) {
+  margin-left: 624px;
+  margin-top: 823px;
+  -webkit-animation: flash 3s linear infinite;
+          animation: flash 3s linear infinite;
+}
+
+.star:nth-of-type(310) {
+  margin-left: 331px;
+  margin-top: 393px;
+  -webkit-animation: flash 5s linear infinite;
+          animation: flash 5s linear infinite;
+}
+
+.star:nth-of-type(311) {
+  margin-left: 1073px;
+  margin-top: 419px;
+  -webkit-animation: flash 5s linear infinite;
+          animation: flash 5s linear infinite;
+}
+
+.star:nth-of-type(312) {
+  margin-left: 697px;
+  margin-top: 238px;
+  -webkit-animation: flash 6s linear infinite;
+          animation: flash 6s linear infinite;
+}
+
+.star:nth-of-type(313) {
+  margin-left: 1560px;
+  margin-top: 79px;
+  -webkit-animation: flash 10s linear infinite;
+          animation: flash 10s linear infinite;
+}
+
+.star:nth-of-type(314) {
+  margin-left: 2496px;
+  margin-top: 794px;
+  -webkit-animation: flash 6s linear infinite;
+          animation: flash 6s linear infinite;
+}
+
+.star:nth-of-type(315) {
+  margin-left: 397px;
+  margin-top: 340px;
+  -webkit-animation: flash 9s linear infinite;
+          animation: flash 9s linear infinite;
+}
+
+.star:nth-of-type(316) {
+  margin-left: 2628px;
+  margin-top: 491px;
+  -webkit-animation: flash 10s linear infinite;
+          animation: flash 10s linear infinite;
+}
+
+.star:nth-of-type(317) {
+  margin-left: 3725px;
+  margin-top: 547px;
+  -webkit-animation: flash 5s linear infinite;
+          animation: flash 5s linear infinite;
+}
+
+.star:nth-of-type(318) {
+  margin-left: 2214px;
+  margin-top: 479px;
+  -webkit-animation: flash 1s linear infinite;
+          animation: flash 1s linear infinite;
+}
+
+.star:nth-of-type(319) {
+  margin-left: 3333px;
+  margin-top: 168px;
+  -webkit-animation: flash 10s linear infinite;
+          animation: flash 10s linear infinite;
+}
+
+.star:nth-of-type(320) {
+  margin-left: 1312px;
+  margin-top: 240px;
+  -webkit-animation: flash 3s linear infinite;
+          animation: flash 3s linear infinite;
+}
+
+.star:nth-of-type(321) {
+  margin-left: 3275px;
+  margin-top: 272px;
+  -webkit-animation: flash 5s linear infinite;
+          animation: flash 5s linear infinite;
+}
+
+.star:nth-of-type(322) {
+  margin-left: 1270px;
+  margin-top: 237px;
+  -webkit-animation: flash 9s linear infinite;
+          animation: flash 9s linear infinite;
+}
+
+.star:nth-of-type(323) {
+  margin-left: 2606px;
+  margin-top: 432px;
+  -webkit-animation: flash 4s linear infinite;
+          animation: flash 4s linear infinite;
+}
+
+.star:nth-of-type(324) {
+  margin-left: 857px;
+  margin-top: 707px;
+  -webkit-animation: flash 1s linear infinite;
+          animation: flash 1s linear infinite;
+}
+
+.star:nth-of-type(325) {
+  margin-left: 3806px;
+  margin-top: 758px;
+  -webkit-animation: flash 3s linear infinite;
+          animation: flash 3s linear infinite;
+}
+
+.star:nth-of-type(326) {
+  margin-left: 1166px;
+  margin-top: 650px;
+  -webkit-animation: flash 6s linear infinite;
+          animation: flash 6s linear infinite;
+}
+
+.star:nth-of-type(327) {
+  margin-left: 1261px;
+  margin-top: 738px;
+  -webkit-animation: flash 10s linear infinite;
+          animation: flash 10s linear infinite;
+}
+
+.star:nth-of-type(328) {
+  margin-left: 1111px;
+  margin-top: 455px;
+  -webkit-animation: flash 5s linear infinite;
+          animation: flash 5s linear infinite;
+}
+
+.star:nth-of-type(329) {
+  margin-left: 3897px;
+  margin-top: 739px;
+  -webkit-animation: flash 5s linear infinite;
+          animation: flash 5s linear infinite;
+}
+
+.star:nth-of-type(330) {
+  margin-left: 2621px;
+  margin-top: 806px;
+  -webkit-animation: flash 3s linear infinite;
+          animation: flash 3s linear infinite;
+}
+
+.star:nth-of-type(331) {
+  margin-left: 3870px;
+  margin-top: 342px;
+  -webkit-animation: flash 1s linear infinite;
+          animation: flash 1s linear infinite;
+}
+
+.star:nth-of-type(332) {
+  margin-left: 245px;
+  margin-top: 854px;
+  -webkit-animation: flash 4s linear infinite;
+          animation: flash 4s linear infinite;
+}
+
+.star:nth-of-type(333) {
+  margin-left: 817px;
+  margin-top: 200px;
+  -webkit-animation: flash 10s linear infinite;
+          animation: flash 10s linear infinite;
+}
+
+.star:nth-of-type(334) {
+  margin-left: 2864px;
+  margin-top: 420px;
+  -webkit-animation: flash 4s linear infinite;
+          animation: flash 4s linear infinite;
+}
+
+.star:nth-of-type(335) {
+  margin-left: 3672px;
+  margin-top: 52px;
+  -webkit-animation: flash 6s linear infinite;
+          animation: flash 6s linear infinite;
+}
+
+.star:nth-of-type(336) {
+  margin-left: 1566px;
+  margin-top: 275px;
+  -webkit-animation: flash 7s linear infinite;
+          animation: flash 7s linear infinite;
+}
+
+.star:nth-of-type(337) {
+  margin-left: 1991px;
+  margin-top: 602px;
+  -webkit-animation: flash 6s linear infinite;
+          animation: flash 6s linear infinite;
+}
+
+.star:nth-of-type(338) {
+  margin-left: 1039px;
+  margin-top: 135px;
+  -webkit-animation: flash 8s linear infinite;
+          animation: flash 8s linear infinite;
+}
+
+.star:nth-of-type(339) {
+  margin-left: 1266px;
+  margin-top: 500px;
+  -webkit-animation: flash 9s linear infinite;
+          animation: flash 9s linear infinite;
+}
+
+.star:nth-of-type(340) {
+  margin-left: 2352px;
+  margin-top: 492px;
+  -webkit-animation: flash 6s linear infinite;
+          animation: flash 6s linear infinite;
+}
+
+.star:nth-of-type(341) {
+  margin-left: 1301px;
+  margin-top: 128px;
+  -webkit-animation: flash 10s linear infinite;
+          animation: flash 10s linear infinite;
+}
+
+.star:nth-of-type(342) {
+  margin-left: 1368px;
+  margin-top: 772px;
+  -webkit-animation: flash 5s linear infinite;
+          animation: flash 5s linear infinite;
+}
+
+.star:nth-of-type(343) {
+  margin-left: 1848px;
+  margin-top: 303px;
+  -webkit-animation: flash 2s linear infinite;
+          animation: flash 2s linear infinite;
+}
+
+.star:nth-of-type(344) {
+  margin-left: 1066px;
+  margin-top: 472px;
+  -webkit-animation: flash 10s linear infinite;
+          animation: flash 10s linear infinite;
+}
+
+.star:nth-of-type(345) {
+  margin-left: 2103px;
+  margin-top: 348px;
+  -webkit-animation: flash 3s linear infinite;
+          animation: flash 3s linear infinite;
+}
+
+.star:nth-of-type(346) {
+  margin-left: 2248px;
+  margin-top: 425px;
+  -webkit-animation: flash 6s linear infinite;
+          animation: flash 6s linear infinite;
+}
+
+.star:nth-of-type(347) {
+  margin-left: 743px;
+  margin-top: 121px;
+  -webkit-animation: flash 5s linear infinite;
+          animation: flash 5s linear infinite;
+}
+
+.star:nth-of-type(348) {
+  margin-left: 670px;
+  margin-top: 5px;
+  -webkit-animation: flash 1s linear infinite;
+          animation: flash 1s linear infinite;
+}
+
+.star:nth-of-type(349) {
+  margin-left: 2024px;
+  margin-top: 233px;
+  -webkit-animation: flash 3s linear infinite;
+          animation: flash 3s linear infinite;
+}
+
+.star:nth-of-type(350) {
+  margin-left: 3311px;
+  margin-top: 257px;
+  -webkit-animation: flash 4s linear infinite;
+          animation: flash 4s linear infinite;
+}
+
+.star:nth-of-type(351) {
+  margin-left: 1919px;
+  margin-top: 260px;
+  -webkit-animation: flash 2s linear infinite;
+          animation: flash 2s linear infinite;
+}
+
+.star:nth-of-type(352) {
+  margin-left: 1220px;
+  margin-top: 207px;
+  -webkit-animation: flash 2s linear infinite;
+          animation: flash 2s linear infinite;
+}
+
+.star:nth-of-type(353) {
+  margin-left: 3594px;
+  margin-top: 682px;
+  -webkit-animation: flash 3s linear infinite;
+          animation: flash 3s linear infinite;
+}
+
+.star:nth-of-type(354) {
+  margin-left: 2764px;
+  margin-top: 847px;
+  -webkit-animation: flash 2s linear infinite;
+          animation: flash 2s linear infinite;
+}
+
+.star:nth-of-type(355) {
+  margin-left: 803px;
+  margin-top: 557px;
+  -webkit-animation: flash 10s linear infinite;
+          animation: flash 10s linear infinite;
+}
+
+.star:nth-of-type(356) {
+  margin-left: 1018px;
+  margin-top: 539px;
+  -webkit-animation: flash 4s linear infinite;
+          animation: flash 4s linear infinite;
+}
+
+.star:nth-of-type(357) {
+  margin-left: 31px;
+  margin-top: 580px;
+  -webkit-animation: flash 6s linear infinite;
+          animation: flash 6s linear infinite;
+}
+
+.star:nth-of-type(358) {
+  margin-left: 3545px;
+  margin-top: 194px;
+  -webkit-animation: flash 9s linear infinite;
+          animation: flash 9s linear infinite;
+}
+
+.star:nth-of-type(359) {
+  margin-left: 3594px;
+  margin-top: 356px;
+  -webkit-animation: flash 10s linear infinite;
+          animation: flash 10s linear infinite;
+}
+
+.star:nth-of-type(360) {
+  margin-left: 3637px;
+  margin-top: 879px;
+  -webkit-animation: flash 2s linear infinite;
+          animation: flash 2s linear infinite;
+}
+
+.star:nth-of-type(361) {
+  margin-left: 575px;
+  margin-top: 192px;
+  -webkit-animation: flash 7s linear infinite;
+          animation: flash 7s linear infinite;
+}
+
+.star:nth-of-type(362) {
+  margin-left: 1076px;
+  margin-top: 7px;
+  -webkit-animation: flash 7s linear infinite;
+          animation: flash 7s linear infinite;
+}
+
+.star:nth-of-type(363) {
+  margin-left: 299px;
+  margin-top: 613px;
+  -webkit-animation: flash 1s linear infinite;
+          animation: flash 1s linear infinite;
+}
+
+.star:nth-of-type(364) {
+  margin-left: 2698px;
+  margin-top: 664px;
+  -webkit-animation: flash 3s linear infinite;
+          animation: flash 3s linear infinite;
+}
+
+.star:nth-of-type(365) {
+  margin-left: 3773px;
+  margin-top: 415px;
+  -webkit-animation: flash 4s linear infinite;
+          animation: flash 4s linear infinite;
+}
+
+.star:nth-of-type(366) {
+  margin-left: 1107px;
+  margin-top: 646px;
+  -webkit-animation: flash 6s linear infinite;
+          animation: flash 6s linear infinite;
+}
+
+.star:nth-of-type(367) {
+  margin-left: 2266px;
+  margin-top: 549px;
+  -webkit-animation: flash 7s linear infinite;
+          animation: flash 7s linear infinite;
+}
+
+.star:nth-of-type(368) {
+  margin-left: 92px;
+  margin-top: 347px;
+  -webkit-animation: flash 7s linear infinite;
+          animation: flash 7s linear infinite;
+}
+
+.star:nth-of-type(369) {
+  margin-left: 642px;
+  margin-top: 461px;
+  -webkit-animation: flash 1s linear infinite;
+          animation: flash 1s linear infinite;
+}
+
+.star:nth-of-type(370) {
+  margin-left: 2480px;
+  margin-top: 715px;
+  -webkit-animation: flash 2s linear infinite;
+          animation: flash 2s linear infinite;
+}
+
+.star:nth-of-type(371) {
+  margin-left: 3954px;
+  margin-top: 493px;
+  -webkit-animation: flash 1s linear infinite;
+          animation: flash 1s linear infinite;
+}
+
+.star:nth-of-type(372) {
+  margin-left: 2282px;
+  margin-top: 135px;
+  -webkit-animation: flash 10s linear infinite;
+          animation: flash 10s linear infinite;
+}
+
+.star:nth-of-type(373) {
+  margin-left: 2081px;
+  margin-top: 167px;
+  -webkit-animation: flash 1s linear infinite;
+          animation: flash 1s linear infinite;
+}
+
+.star:nth-of-type(374) {
+  margin-left: 67px;
+  margin-top: 735px;
+  -webkit-animation: flash 3s linear infinite;
+          animation: flash 3s linear infinite;
+}
+
+.star:nth-of-type(375) {
+  margin-left: 1269px;
+  margin-top: 450px;
+  -webkit-animation: flash 1s linear infinite;
+          animation: flash 1s linear infinite;
+}
+
+.star:nth-of-type(376) {
+  margin-left: 1604px;
+  margin-top: 630px;
+  -webkit-animation: flash 7s linear infinite;
+          animation: flash 7s linear infinite;
+}
+
+.star:nth-of-type(377) {
+  margin-left: 946px;
+  margin-top: 37px;
+  -webkit-animation: flash 3s linear infinite;
+          animation: flash 3s linear infinite;
+}
+
+.star:nth-of-type(378) {
+  margin-left: 951px;
+  margin-top: 511px;
+  -webkit-animation: flash 10s linear infinite;
+          animation: flash 10s linear infinite;
+}
+
+.star:nth-of-type(379) {
+  margin-left: 2861px;
+  margin-top: 214px;
+  -webkit-animation: flash 6s linear infinite;
+          animation: flash 6s linear infinite;
+}
+
+.star:nth-of-type(380) {
+  margin-left: 3653px;
+  margin-top: 249px;
+  -webkit-animation: flash 9s linear infinite;
+          animation: flash 9s linear infinite;
+}
+
+.star:nth-of-type(381) {
+  margin-left: 1391px;
+  margin-top: 755px;
+  -webkit-animation: flash 9s linear infinite;
+          animation: flash 9s linear infinite;
+}
+
+.star:nth-of-type(382) {
+  margin-left: 1559px;
+  margin-top: 154px;
+  -webkit-animation: flash 4s linear infinite;
+          animation: flash 4s linear infinite;
+}
+
+.star:nth-of-type(383) {
+  margin-left: 3411px;
+  margin-top: 738px;
+  -webkit-animation: flash 8s linear infinite;
+          animation: flash 8s linear infinite;
+}
+
+.star:nth-of-type(384) {
+  margin-left: 1272px;
+  margin-top: 774px;
+  -webkit-animation: flash 6s linear infinite;
+          animation: flash 6s linear infinite;
+}
+
+.star:nth-of-type(385) {
+  margin-left: 2543px;
+  margin-top: 772px;
+  -webkit-animation: flash 2s linear infinite;
+          animation: flash 2s linear infinite;
+}
+
+.star:nth-of-type(386) {
+  margin-left: 819px;
+  margin-top: 473px;
+  -webkit-animation: flash 3s linear infinite;
+          animation: flash 3s linear infinite;
+}
+
+.star:nth-of-type(387) {
+  margin-left: 1805px;
+  margin-top: 811px;
+  -webkit-animation: flash 2s linear infinite;
+          animation: flash 2s linear infinite;
+}
+
+.star:nth-of-type(388) {
+  margin-left: 984px;
+  margin-top: 329px;
+  -webkit-animation: flash 6s linear infinite;
+          animation: flash 6s linear infinite;
+}
+
+.star:nth-of-type(389) {
+  margin-left: 1422px;
+  margin-top: 748px;
+  -webkit-animation: flash 6s linear infinite;
+          animation: flash 6s linear infinite;
+}
+
+.star:nth-of-type(390) {
+  margin-left: 2888px;
+  margin-top: 209px;
+  -webkit-animation: flash 8s linear infinite;
+          animation: flash 8s linear infinite;
+}
+
+.star:nth-of-type(391) {
+  margin-left: 3915px;
+  margin-top: 438px;
+  -webkit-animation: flash 5s linear infinite;
+          animation: flash 5s linear infinite;
+}
+
+.star:nth-of-type(392) {
+  margin-left: 634px;
+  margin-top: 822px;
+  -webkit-animation: flash 1s linear infinite;
+          animation: flash 1s linear infinite;
+}
+
+.star:nth-of-type(393) {
+  margin-left: 350px;
+  margin-top: 711px;
+  -webkit-animation: flash 8s linear infinite;
+          animation: flash 8s linear infinite;
+}
+
+.star:nth-of-type(394) {
+  margin-left: 2927px;
+  margin-top: 77px;
+  -webkit-animation: flash 6s linear infinite;
+          animation: flash 6s linear infinite;
+}
+
+.star:nth-of-type(395) {
+  margin-left: 678px;
+  margin-top: 345px;
+  -webkit-animation: flash 9s linear infinite;
+          animation: flash 9s linear infinite;
+}
+
+.star:nth-of-type(396) {
+  margin-left: 1299px;
+  margin-top: 575px;
+  -webkit-animation: flash 7s linear infinite;
+          animation: flash 7s linear infinite;
+}
+
+.star:nth-of-type(397) {
+  margin-left: 2961px;
+  margin-top: 450px;
+  -webkit-animation: flash 9s linear infinite;
+          animation: flash 9s linear infinite;
+}
+
+.star:nth-of-type(398) {
+  margin-left: 268px;
+  margin-top: 880px;
+  -webkit-animation: flash 5s linear infinite;
+          animation: flash 5s linear infinite;
+}
+
+.star:nth-of-type(399) {
+  margin-left: 1107px;
+  margin-top: 420px;
+  -webkit-animation: flash 7s linear infinite;
+          animation: flash 7s linear infinite;
+}
+
+.star:nth-of-type(400) {
+  margin-left: 1258px;
+  margin-top: 684px;
+  -webkit-animation: flash 3s linear infinite;
+          animation: flash 3s linear infinite;
+}
+
+.star:nth-of-type(401) {
+  margin-left: 1274px;
+  margin-top: 206px;
+  -webkit-animation: flash 1s linear infinite;
+          animation: flash 1s linear infinite;
+}
+
+.star:nth-of-type(402) {
+  margin-left: 1088px;
+  margin-top: 748px;
+  -webkit-animation: flash 3s linear infinite;
+          animation: flash 3s linear infinite;
+}
+
+.star:nth-of-type(403) {
+  margin-left: 3908px;
+  margin-top: 609px;
+  -webkit-animation: flash 8s linear infinite;
+          animation: flash 8s linear infinite;
+}
+
+.star:nth-of-type(404) {
+  margin-left: 3858px;
+  margin-top: 427px;
+  -webkit-animation: flash 2s linear infinite;
+          animation: flash 2s linear infinite;
+}
+
+.star:nth-of-type(405) {
+  margin-left: 3159px;
+  margin-top: 714px;
+  -webkit-animation: flash 3s linear infinite;
+          animation: flash 3s linear infinite;
+}
+
+.star:nth-of-type(406) {
+  margin-left: 2046px;
+  margin-top: 275px;
+  -webkit-animation: flash 4s linear infinite;
+          animation: flash 4s linear infinite;
+}
+
+.star:nth-of-type(407) {
+  margin-left: 1410px;
+  margin-top: 439px;
+  -webkit-animation: flash 9s linear infinite;
+          animation: flash 9s linear infinite;
+}
+
+.star:nth-of-type(408) {
+  margin-left: 1893px;
+  margin-top: 394px;
+  -webkit-animation: flash 6s linear infinite;
+          animation: flash 6s linear infinite;
+}
+
+.star:nth-of-type(409) {
+  margin-left: 2877px;
+  margin-top: 196px;
+  -webkit-animation: flash 5s linear infinite;
+          animation: flash 5s linear infinite;
+}
+
+.star:nth-of-type(410) {
+  margin-left: 3286px;
+  margin-top: 894px;
+  -webkit-animation: flash 6s linear infinite;
+          animation: flash 6s linear infinite;
+}
+
+.star:nth-of-type(411) {
+  margin-left: 3317px;
+  margin-top: 891px;
+  -webkit-animation: flash 7s linear infinite;
+          animation: flash 7s linear infinite;
+}
+
+.star:nth-of-type(412) {
+  margin-left: 3385px;
+  margin-top: 178px;
+  -webkit-animation: flash 7s linear infinite;
+          animation: flash 7s linear infinite;
+}
+
+.star:nth-of-type(413) {
+  margin-left: 354px;
+  margin-top: 304px;
+  -webkit-animation: flash 5s linear infinite;
+          animation: flash 5s linear infinite;
+}
+
+.star:nth-of-type(414) {
+  margin-left: 3285px;
+  margin-top: 118px;
+  -webkit-animation: flash 7s linear infinite;
+          animation: flash 7s linear infinite;
+}
+
+.star:nth-of-type(415) {
+  margin-left: 2909px;
+  margin-top: 393px;
+  -webkit-animation: flash 10s linear infinite;
+          animation: flash 10s linear infinite;
+}
+
+.star:nth-of-type(416) {
+  margin-left: 97px;
+  margin-top: 287px;
+  -webkit-animation: flash 8s linear infinite;
+          animation: flash 8s linear infinite;
+}
+
+.star:nth-of-type(417) {
+  margin-left: 203px;
+  margin-top: 49px;
+  -webkit-animation: flash 8s linear infinite;
+          animation: flash 8s linear infinite;
+}
+
+.star:nth-of-type(418) {
+  margin-left: 3450px;
+  margin-top: 861px;
+  -webkit-animation: flash 8s linear infinite;
+          animation: flash 8s linear infinite;
+}
+
+.star:nth-of-type(419) {
+  margin-left: 3850px;
+  margin-top: 333px;
+  -webkit-animation: flash 7s linear infinite;
+          animation: flash 7s linear infinite;
+}
+
+.star:nth-of-type(420) {
+  margin-left: 689px;
+  margin-top: 40px;
+  -webkit-animation: flash 1s linear infinite;
+          animation: flash 1s linear infinite;
+}
+
+.star:nth-of-type(421) {
+  margin-left: 3739px;
+  margin-top: 544px;
+  -webkit-animation: flash 9s linear infinite;
+          animation: flash 9s linear infinite;
+}
+
+.star:nth-of-type(422) {
+  margin-left: 2727px;
+  margin-top: 9px;
+  -webkit-animation: flash 8s linear infinite;
+          animation: flash 8s linear infinite;
+}
+
+.star:nth-of-type(423) {
+  margin-left: 3481px;
+  margin-top: 65px;
+  -webkit-animation: flash 4s linear infinite;
+          animation: flash 4s linear infinite;
+}
+
+.star:nth-of-type(424) {
+  margin-left: 805px;
+  margin-top: 552px;
+  -webkit-animation: flash 10s linear infinite;
+          animation: flash 10s linear infinite;
+}
+
+.star:nth-of-type(425) {
+  margin-left: 311px;
+  margin-top: 474px;
+  -webkit-animation: flash 2s linear infinite;
+          animation: flash 2s linear infinite;
+}
+
+.star:nth-of-type(426) {
+  margin-left: 2082px;
+  margin-top: 364px;
+  -webkit-animation: flash 7s linear infinite;
+          animation: flash 7s linear infinite;
+}
+
+.star:nth-of-type(427) {
+  margin-left: 555px;
+  margin-top: 326px;
+  -webkit-animation: flash 9s linear infinite;
+          animation: flash 9s linear infinite;
+}
+
+.star:nth-of-type(428) {
+  margin-left: 2147px;
+  margin-top: 473px;
+  -webkit-animation: flash 5s linear infinite;
+          animation: flash 5s linear infinite;
+}
+
+.star:nth-of-type(429) {
+  margin-left: 3486px;
+  margin-top: 236px;
+  -webkit-animation: flash 2s linear infinite;
+          animation: flash 2s linear infinite;
+}
+
+.star:nth-of-type(430) {
+  margin-left: 2844px;
+  margin-top: 316px;
+  -webkit-animation: flash 1s linear infinite;
+          animation: flash 1s linear infinite;
+}
+
+.star:nth-of-type(431) {
+  margin-left: 2956px;
+  margin-top: 760px;
+  -webkit-animation: flash 1s linear infinite;
+          animation: flash 1s linear infinite;
+}
+
+.star:nth-of-type(432) {
+  margin-left: 2829px;
+  margin-top: 604px;
+  -webkit-animation: flash 1s linear infinite;
+          animation: flash 1s linear infinite;
+}
+
+.star:nth-of-type(433) {
+  margin-left: 1520px;
+  margin-top: 342px;
+  -webkit-animation: flash 9s linear infinite;
+          animation: flash 9s linear infinite;
+}
+
+.star:nth-of-type(434) {
+  margin-left: 1643px;
+  margin-top: 866px;
+  -webkit-animation: flash 1s linear infinite;
+          animation: flash 1s linear infinite;
+}
+
+.star:nth-of-type(435) {
+  margin-left: 1923px;
+  margin-top: 486px;
+  -webkit-animation: flash 5s linear infinite;
+          animation: flash 5s linear infinite;
+}
+
+.star:nth-of-type(436) {
+  margin-left: 2863px;
+  margin-top: 107px;
+  -webkit-animation: flash 1s linear infinite;
+          animation: flash 1s linear infinite;
+}
+
+.star:nth-of-type(437) {
+  margin-left: 3685px;
+  margin-top: 835px;
+  -webkit-animation: flash 8s linear infinite;
+          animation: flash 8s linear infinite;
+}
+
+.star:nth-of-type(438) {
+  margin-left: 2538px;
+  margin-top: 859px;
+  -webkit-animation: flash 4s linear infinite;
+          animation: flash 4s linear infinite;
+}
+
+.star:nth-of-type(439) {
+  margin-left: 743px;
+  margin-top: 584px;
+  -webkit-animation: flash 2s linear infinite;
+          animation: flash 2s linear infinite;
+}
+
+.star:nth-of-type(440) {
+  margin-left: 3118px;
+  margin-top: 636px;
+  -webkit-animation: flash 1s linear infinite;
+          animation: flash 1s linear infinite;
+}
+
+.star:nth-of-type(441) {
+  margin-left: 1033px;
+  margin-top: 346px;
+  -webkit-animation: flash 6s linear infinite;
+          animation: flash 6s linear infinite;
+}
+
+.star:nth-of-type(442) {
+  margin-left: 2484px;
+  margin-top: 44px;
+  -webkit-animation: flash 10s linear infinite;
+          animation: flash 10s linear infinite;
+}
+
+.star:nth-of-type(443) {
+  margin-left: 627px;
+  margin-top: 142px;
+  -webkit-animation: flash 3s linear infinite;
+          animation: flash 3s linear infinite;
+}
+
+.star:nth-of-type(444) {
+  margin-left: 1212px;
+  margin-top: 742px;
+  -webkit-animation: flash 4s linear infinite;
+          animation: flash 4s linear infinite;
+}
+
+.star:nth-of-type(445) {
+  margin-left: 2813px;
+  margin-top: 641px;
+  -webkit-animation: flash 5s linear infinite;
+          animation: flash 5s linear infinite;
+}
+
+.star:nth-of-type(446) {
+  margin-left: 1212px;
+  margin-top: 246px;
+  -webkit-animation: flash 9s linear infinite;
+          animation: flash 9s linear infinite;
+}
+
+.star:nth-of-type(447) {
+  margin-left: 2967px;
+  margin-top: 380px;
+  -webkit-animation: flash 9s linear infinite;
+          animation: flash 9s linear infinite;
+}
+
+.star:nth-of-type(448) {
+  margin-left: 1479px;
+  margin-top: 312px;
+  -webkit-animation: flash 6s linear infinite;
+          animation: flash 6s linear infinite;
+}
+
+.star:nth-of-type(449) {
+  margin-left: 3226px;
+  margin-top: 92px;
+  -webkit-animation: flash 5s linear infinite;
+          animation: flash 5s linear infinite;
+}
+
+.star:nth-of-type(450) {
+  margin-left: 554px;
+  margin-top: 676px;
+  -webkit-animation: flash 7s linear infinite;
+          animation: flash 7s linear infinite;
+}
+
+.star:nth-of-type(451) {
+  margin-left: 3356px;
+  margin-top: 787px;
+  -webkit-animation: flash 7s linear infinite;
+          animation: flash 7s linear infinite;
+}
+
+.star:nth-of-type(452) {
+  margin-left: 2655px;
+  margin-top: 448px;
+  -webkit-animation: flash 1s linear infinite;
+          animation: flash 1s linear infinite;
+}
+
+.star:nth-of-type(453) {
+  margin-left: 3339px;
+  margin-top: 638px;
+  -webkit-animation: flash 8s linear infinite;
+          animation: flash 8s linear infinite;
+}
+
+.star:nth-of-type(454) {
+  margin-left: 1792px;
+  margin-top: 747px;
+  -webkit-animation: flash 5s linear infinite;
+          animation: flash 5s linear infinite;
+}
+
+.star:nth-of-type(455) {
+  margin-left: 2298px;
+  margin-top: 94px;
+  -webkit-animation: flash 3s linear infinite;
+          animation: flash 3s linear infinite;
+}
+
+.star:nth-of-type(456) {
+  margin-left: 2641px;
+  margin-top: 422px;
+  -webkit-animation: flash 1s linear infinite;
+          animation: flash 1s linear infinite;
+}
+
+.star:nth-of-type(457) {
+  margin-left: 3894px;
+  margin-top: 539px;
+  -webkit-animation: flash 9s linear infinite;
+          animation: flash 9s linear infinite;
+}
+
+.star:nth-of-type(458) {
+  margin-left: 1376px;
+  margin-top: 14px;
+  -webkit-animation: flash 4s linear infinite;
+          animation: flash 4s linear infinite;
+}
+
+.star:nth-of-type(459) {
+  margin-left: 2187px;
+  margin-top: 890px;
+  -webkit-animation: flash 5s linear infinite;
+          animation: flash 5s linear infinite;
+}
+
+.star:nth-of-type(460) {
+  margin-left: 743px;
+  margin-top: 595px;
+  -webkit-animation: flash 2s linear infinite;
+          animation: flash 2s linear infinite;
+}
+
+.star:nth-of-type(461) {
+  margin-left: 914px;
+  margin-top: 642px;
+  -webkit-animation: flash 8s linear infinite;
+          animation: flash 8s linear infinite;
+}
+
+.star:nth-of-type(462) {
+  margin-left: 82px;
+  margin-top: 703px;
+  -webkit-animation: flash 1s linear infinite;
+          animation: flash 1s linear infinite;
+}
+
+.star:nth-of-type(463) {
+  margin-left: 222px;
+  margin-top: 42px;
+  -webkit-animation: flash 10s linear infinite;
+          animation: flash 10s linear infinite;
+}
+
+.star:nth-of-type(464) {
+  margin-left: 141px;
+  margin-top: 794px;
+  -webkit-animation: flash 5s linear infinite;
+          animation: flash 5s linear infinite;
+}
+
+.star:nth-of-type(465) {
+  margin-left: 407px;
+  margin-top: 144px;
+  -webkit-animation: flash 10s linear infinite;
+          animation: flash 10s linear infinite;
+}
+
+.star:nth-of-type(466) {
+  margin-left: 999px;
+  margin-top: 679px;
+  -webkit-animation: flash 3s linear infinite;
+          animation: flash 3s linear infinite;
+}
+
+.star:nth-of-type(467) {
+  margin-left: 50px;
+  margin-top: 731px;
+  -webkit-animation: flash 1s linear infinite;
+          animation: flash 1s linear infinite;
+}
+
+.star:nth-of-type(468) {
+  margin-left: 3437px;
+  margin-top: 850px;
+  -webkit-animation: flash 2s linear infinite;
+          animation: flash 2s linear infinite;
+}
+
+.star:nth-of-type(469) {
+  margin-left: 1433px;
+  margin-top: 363px;
+  -webkit-animation: flash 10s linear infinite;
+          animation: flash 10s linear infinite;
+}
+
+.star:nth-of-type(470) {
+  margin-left: 1394px;
+  margin-top: 554px;
+  -webkit-animation: flash 4s linear infinite;
+          animation: flash 4s linear infinite;
+}
+
+.star:nth-of-type(471) {
+  margin-left: 1085px;
+  margin-top: 531px;
+  -webkit-animation: flash 3s linear infinite;
+          animation: flash 3s linear infinite;
+}
+
+.star:nth-of-type(472) {
+  margin-left: 3167px;
+  margin-top: 652px;
+  -webkit-animation: flash 3s linear infinite;
+          animation: flash 3s linear infinite;
+}
+
+.star:nth-of-type(473) {
+  margin-left: 570px;
+  margin-top: 793px;
+  -webkit-animation: flash 5s linear infinite;
+          animation: flash 5s linear infinite;
+}
+
+.star:nth-of-type(474) {
+  margin-left: 899px;
+  margin-top: 124px;
+  -webkit-animation: flash 3s linear infinite;
+          animation: flash 3s linear infinite;
+}
+
+.star:nth-of-type(475) {
+  margin-left: 111px;
+  margin-top: 315px;
+  -webkit-animation: flash 8s linear infinite;
+          animation: flash 8s linear infinite;
+}
+
+.star:nth-of-type(476) {
+  margin-left: 3738px;
+  margin-top: 540px;
+  -webkit-animation: flash 2s linear infinite;
+          animation: flash 2s linear infinite;
+}
+
+.star:nth-of-type(477) {
+  margin-left: 3118px;
+  margin-top: 442px;
+  -webkit-animation: flash 3s linear infinite;
+          animation: flash 3s linear infinite;
+}
+
+.star:nth-of-type(478) {
+  margin-left: 3264px;
+  margin-top: 556px;
+  -webkit-animation: flash 5s linear infinite;
+          animation: flash 5s linear infinite;
+}
+
+.star:nth-of-type(479) {
+  margin-left: 2782px;
+  margin-top: 697px;
+  -webkit-animation: flash 9s linear infinite;
+          animation: flash 9s linear infinite;
+}
+
+.star:nth-of-type(480) {
+  margin-left: 3565px;
+  margin-top: 821px;
+  -webkit-animation: flash 5s linear infinite;
+          animation: flash 5s linear infinite;
+}
+
+.star:nth-of-type(481) {
+  margin-left: 2800px;
+  margin-top: 85px;
+  -webkit-animation: flash 3s linear infinite;
+          animation: flash 3s linear infinite;
+}
+
+.star:nth-of-type(482) {
+  margin-left: 2155px;
+  margin-top: 868px;
+  -webkit-animation: flash 7s linear infinite;
+          animation: flash 7s linear infinite;
+}
+
+.star:nth-of-type(483) {
+  margin-left: 2346px;
+  margin-top: 136px;
+  -webkit-animation: flash 2s linear infinite;
+          animation: flash 2s linear infinite;
+}
+
+.star:nth-of-type(484) {
+  margin-left: 671px;
+  margin-top: 805px;
+  -webkit-animation: flash 5s linear infinite;
+          animation: flash 5s linear infinite;
+}
+
+.star:nth-of-type(485) {
+  margin-left: 905px;
+  margin-top: 404px;
+  -webkit-animation: flash 8s linear infinite;
+          animation: flash 8s linear infinite;
+}
+
+.star:nth-of-type(486) {
+  margin-left: 3885px;
+  margin-top: 873px;
+  -webkit-animation: flash 7s linear infinite;
+          animation: flash 7s linear infinite;
+}
+
+.star:nth-of-type(487) {
+  margin-left: 376px;
+  margin-top: 794px;
+  -webkit-animation: flash 7s linear infinite;
+          animation: flash 7s linear infinite;
+}
+
+.star:nth-of-type(488) {
+  margin-left: 3474px;
+  margin-top: 679px;
+  -webkit-animation: flash 2s linear infinite;
+          animation: flash 2s linear infinite;
+}
+
+.star:nth-of-type(489) {
+  margin-left: 2841px;
+  margin-top: 801px;
+  -webkit-animation: flash 2s linear infinite;
+          animation: flash 2s linear infinite;
+}
+
+.star:nth-of-type(490) {
+  margin-left: 3300px;
+  margin-top: 248px;
+  -webkit-animation: flash 6s linear infinite;
+          animation: flash 6s linear infinite;
+}
+
+.star:nth-of-type(491) {
+  margin-left: 196px;
+  margin-top: 727px;
+  -webkit-animation: flash 8s linear infinite;
+          animation: flash 8s linear infinite;
+}
+
+.star:nth-of-type(492) {
+  margin-left: 2512px;
+  margin-top: 771px;
+  -webkit-animation: flash 8s linear infinite;
+          animation: flash 8s linear infinite;
+}
+
+.star:nth-of-type(493) {
+  margin-left: 2575px;
+  margin-top: 33px;
+  -webkit-animation: flash 1s linear infinite;
+          animation: flash 1s linear infinite;
+}
+
+.star:nth-of-type(494) {
+  margin-left: 3798px;
+  margin-top: 882px;
+  -webkit-animation: flash 3s linear infinite;
+          animation: flash 3s linear infinite;
+}
+
+.star:nth-of-type(495) {
+  margin-left: 1969px;
+  margin-top: 448px;
+  -webkit-animation: flash 8s linear infinite;
+          animation: flash 8s linear infinite;
+}
+
+.star:nth-of-type(496) {
+  margin-left: 1843px;
+  margin-top: 810px;
+  -webkit-animation: flash 2s linear infinite;
+          animation: flash 2s linear infinite;
+}
+
+.star:nth-of-type(497) {
+  margin-left: 3231px;
+  margin-top: 210px;
+  -webkit-animation: flash 6s linear infinite;
+          animation: flash 6s linear infinite;
+}
+
+.star:nth-of-type(498) {
+  margin-left: 1054px;
+  margin-top: 275px;
+  -webkit-animation: flash 4s linear infinite;
+          animation: flash 4s linear infinite;
+}
+
+.star:nth-of-type(499) {
+  margin-left: 3519px;
+  margin-top: 790px;
+  -webkit-animation: flash 5s linear infinite;
+          animation: flash 5s linear infinite;
+}
+
+.star:nth-of-type(500) {
+  margin-left: 3473px;
+  margin-top: 555px;
+  -webkit-animation: flash 10s linear infinite;
+          animation: flash 10s linear infinite;
+}
+
+@-webkit-keyframes flash {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes flash {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes gravity {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes gravity {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+/*# sourceMappingURL=solar-system.css.map */
