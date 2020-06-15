@@ -90,12 +90,12 @@ header a.logo:hover::before {
 }
 @media (min-width: 600px) {
   .page-content-projects {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 @media (min-width: 800px) {
   .page-content-projects {
-    grid-template-columns: repeat(2, 1fr); /* Changes number of items per row*/
+    grid-template-columns: repeat(3, 1fr); /* Changes number of items per row*/
   }
 }
 
@@ -151,11 +151,22 @@ header a.logo:hover::before {
   transition: transform calc(var(--d) * 2) var(--e);
   transition: transform calc(var(--d) * 2) var(--e), -webkit-transform calc(var(--d) * 2) var(--e);
 }
+
+/* Project Pictures */
 .card-projects:nth-child(1):before {
   background-image: url("../assets/{SR}.png");
+  width: 90%;
+  height: 70%;
 }
 .card-projects:nth-child(2):before {
   background-image: url("../assets/output-onlinepngtools.png");
+  width: 101%;
+  height: 70%;
+}
+.card-projects:nth-child(3):before {
+  background-image: url("../assets/TreasureAI_logo.png");
+  width: 100%;
+  height: 100%;
 }
 
 .content {
@@ -280,7 +291,7 @@ header a.logo:hover::before {
 }
 @media (min-width: 600px) {
   .page-content-work {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 @media (min-width: 800px) {
