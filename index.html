@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Shivaen</title>
+    <title>Home | Shivaen | @}}>-----</title>
     <link rel="icon" href="../assets/favicon.ico">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
@@ -21,76 +21,83 @@
       <a class="link" href="contact.html">Contact</a>
     </div>
   </header>
-  <div class="intro">
-    <canvas id="dots-1"></canvas>
-    <div class="container">
-      <div class="text"></div>
-      <section id="scroll" class="demo">
-        <a href="#down"><span></span><span></span><span></span></a>
-      </section>
-    </div>
-    <img src="smiley.gif" alt="Smiley face" height="42" width="42" style="display: none">
-    <canvas id="dots-2"></canvas><br>
-    <canvas id="rose"></canvas>
-  </div>
-    <!-- <div class="container-rose">
-      <div class="rose-leaves">
-        <div></div>
-        <div></div>
+    <div class="intro">
+      <canvas id="dots-1"></canvas>
+      <div class="container">
+        <!-- <div class="text"></div> -->
+        <section id="scroll">
+          <a href="#down"><span></span><span></span><span></span></a>
+        </section>
       </div>
-      <div class="rose-petals">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+      <canvas id="dots-2"></canvas><br>
+      <canvas id="rose"></canvas>
+    </div>
+    <div id="down" class="about">
+      <div class="about-text">
+        <h2>About Me</h2>
+        <h4 class="Position">Incoming NLP intern at Brain Technologies</h4>
+        <h5>I am 21 years old and currently pursuing a masters in computer science from Georgia Tech.</h5>
+        <h5>
+          I was raised in Kansas and moved to Virginia midway through 10th grade, where I graduated from Rock Ridge High School and
+          attended the University of Virginia for my undergrad. During my undergrad I was a student researcher for Professor <a href="http://www.cs.virginia.edu/~hw5x/">Hongning Wang</a>
+          , where I studied deep learning models in relation to recommendation systems. Specifically, the issues of popularity bias and manners in which one can
+          evaluate and debias such models.
+        </h5>
+        <h5>
+          In my free time I enjoy working out, playing video games, spending time outside, and learning new things. Presently, I am leanring how to
+          make 3D renders, produce music, and the piano. 
+        </h5>
       </div>
-    </div> -->
-  <div id="down" class="about">
-    <div class="about-text">
-      <h2>About Me</h2>
-      <h5>I am 20 years old and studying Computer Science.</h5>
-      <h5>
-        Currently, I am focusing on improving my abilities in the fields of data science and AI and hope to join those fields in the upcoming years.
-        I welcome all oppurtnities as a chance to grow and will continue to work towards the goals I have set for myself. 
-      </h5>
-      <h5>
-        Don't hesitate to contact me!
-      </h5>
+      <div class="showcase">
+        <img src="assets/astronaut-2.jpg" alt="profile_pic" class="profile">
+      </div>
+      <div class="back-showcase"></div>
+      <div class="featured">
+        <h2>Featured</h2>
+        <main class="page-content-projects">
+          <div class="card-projects">
+            <div class="content">
+              <h2 class="title"></h2>
+              <p class="copy"></p>
+              <form action="" target="_blank" rel="noopener noreferrer">
+                <button type="submit" class="btn btn-light"></button>
+              </form>
+            </div>
+          </div>
+          <div class="card-projects">
+            <div class="content">
+              <h2 class="title"></h2>
+              <p class="copy"></p>
+              <form action="" target="_blank" rel="noopener noreferrer">
+                <button type="submit" class="btn btn-light"></button>
+              </form>
+              <form action="" target="_blank" rel="noopener noreferrer">
+                <button type="submit" class="btn btn-light"></button>
+              </form>
+            </div>
+          </div>
+          <div class="card-projects">
+            <div class="content">
+              <h2 class="title"></h2>
+              <p class="copy"></p>
+              <form action="" target="_blank" rel="noopener noreferrer">
+                <button type="submit" class="btn btn-light"></button>
+              </form>
+              <form action="" target="_blank" rel="noopener noreferrer">
+                <button type="submit" class="btn btn-light"></button>
+              </form>
+            </div>
+          </div>
+        </main>
+      </div>
     </div>
-    <div class="showcase">
-      <img src="assets/astronaut-2.jpg" alt="profile_pic" class="profile">
-    </div>
-    <div class="back-showcase"></div>
-  </div>
+    
   <script src="js/home_text.js"></script>
   <script src="js/dots-1.js"></script>
   <script src="js/dots-2.js"></script>
   <script src="js/rose.js"></script>
   <script>
-    // $(document).ready(function() {
-    //   $(".container").hover(function() {
-    //     $(this).hide();
-    //     $("img").css("display", "inline")
-    //   });
-    // });
 
-    //Scrolling effect, from https://www.w3schools.com/howto/howto_css_smooth_scroll.asp#section2
-    $(document).ready(function(){
-      $("a").on('click', function(event) {
-        if (this.hash !== "") {
-          event.preventDefault();
-          var hash = this.hash;
-          $('html, body').animate({
-            scrollTop: $(hash).offset().top
-          }, 1000, function(){
-            window.location.hash = hash;
-          });
-        }
-      });
-    });
   </script>
 </body>
 

@@ -40,7 +40,7 @@ header a:hover span {
 }
 
 header a.logo:hover::before {
-  content: "{ SR }";
+  content: "{ return }";
 }
 
 .header-right {
@@ -191,21 +191,23 @@ header a.logo:hover::before {
 }
 
 .title {
+  margin-top: 2%;
   font-size: 1.3rem;
   font-weight: bold;
-  line-height: 1.2;
+  line-height: .1;
 }
 
-.copy {
+.timeframe {
   font-family: var(--font-serif);
   font-size: 1.125rem;
   font-style: italic;
-  line-height: 1.35;
+  line-height: .2;
+  margin-bottom: .02rem;
 }
 
 .btn {
   cursor: pointer;
-  margin-top: 1.5rem;
+  margin-bottom: 2%;
   padding: 0.75rem 1.5rem;
   font-size: 0.65rem;
   font-weight: bold;
