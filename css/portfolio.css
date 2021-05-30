@@ -380,11 +380,12 @@ Main components
 
 .cd-timeline-block:hover .cd-timeline-img {
   -webkit-animation: gradient .5s ease forwards;
+          animation: gradient .5s ease forwards;
 }
 
 @-webkit-keyframes gradient {
   0% {
-    background-position: 0% 50%;
+    background-position: auto 50%;
   }
   100% {
     background-position: 100% 50%;
@@ -393,6 +394,8 @@ Main components
 
 .cd-timeline-block .cd-timeline-img {
   -webkit-animation: gradient-end .5s ease forwards;
+          animation: gradient-end .5s ease forwards;
+    
 }
 
 @-webkit-keyframes gradient-end {
@@ -421,9 +424,17 @@ Main components
   position: relative;
   margin-left: 60px;
   margin-right: 30px;
-  background: #489bff;
-  border-radius: 20px;
+  border-radius: 10px;
   padding: 1em;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 200% 200%;
+  -webkit-animation: gradient-end 2s ease forwards;
+          animation: gradient-end 2s ease forwards;
+}
+
+.cd-timeline-block:hover .cd-timeline-content {
+  -webkit-animation: gradient 2s ease forwards;
+          animation: gradient 2s ease forwards;
 }
 
 .cd-timeline-content .timeline-content-info {
@@ -456,7 +467,7 @@ Main components
   justify-content: center;
 }
 .cd-timeline-content .content-skills li {
-  background: #7cb7ff;
+  background: #2f8dff;
   border-radius: 2px;
   display: inline-block;
   padding: 2px 10px;
@@ -501,7 +512,7 @@ Main components
   height: 0;
   width: 0;
   border: 7px solid transparent;
-  border-right: 7px solid #333C42;
+  border-right: 7px solid #ee7752;
 }
 
 @media only screen and (min-width: 768px) {
@@ -533,7 +544,7 @@ Main components
     top: 24px;
     left: 100%;
     border-color: transparent;
-    border-left-color: #333C42;
+    border-left-color: #e73c7e;
   }
 
   .cd-timeline-content .cd-date {
@@ -555,7 +566,7 @@ Main components
     left: auto;
     right: 100%;
     border-color: transparent;
-    border-right-color: #333C42;
+    border-right-color: #23a6d5;
   }
 
   .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-read-more {
@@ -564,7 +575,7 @@ Main components
 
   .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-date {
     left: auto;
-    right: 122%;
+    right: 133%;
     text-align: right;
   }
 }

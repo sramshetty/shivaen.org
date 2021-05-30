@@ -31,7 +31,7 @@ header a:hover span {
 }
 
 header a.logo:hover::before {
-  content: "\00a0\00a0{}";
+  content: "\00a0\00a0\00a0;\00a0\00a0\00a0";
 }
 
 .header-right {
@@ -180,6 +180,7 @@ header a.logo:hover::before {
 .about {
   text-align: center;
   background-color: white;
+  padding-top: 2%;
   height: 100%;
   font-family: var(--font-sans);
 }
@@ -241,10 +242,10 @@ header a.logo:hover::before {
   position: absolute;
   float: left;
   background-color: black;
-  top: 115%;
+  top: 120%;
   left: 67%;
   width: 15vw;
-  height: 10vw;
+  height: 17vw;
   z-index: 3;
 }
 
@@ -255,10 +256,10 @@ header a.logo:hover::before {
 .back-showcase {
   position: absolute;
   float: left;
-  top: 117%;
+  top: 122%;
   left: 69%;
   width: 15vw;
-  height: 10vw;
+  height: 17vw;
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   background-size: 200% 200%;
   -webkit-animation: gradient 10s ease infinite;
@@ -290,13 +291,6 @@ header a.logo:hover::before {
   }
 }
 /*# sourceMappingURL=main.css.map */
-
-.timeline {
-  text-align: center;
-  background-color: black;
-  height: 100%;
-  font-family: var(--font-sans);
-}
 
 .section-1 {
   text-align: center;
