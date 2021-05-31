@@ -95,12 +95,16 @@ header a.logo:hover::before {
 
 @media (min-width: 600px) {
   .page-content-projects {
-    grid-template-columns: repeat(3, 1fr);
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
   }
 }
+
 @media (min-width: 800px) {
   .page-content-projects {
-    grid-template-columns: repeat(3, 1fr); /* Changes number of items per row*/
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    /* Changes number of items per row*/
   }
 }
 
@@ -399,6 +403,28 @@ Main components
   animation: gradient .5s ease forwards;
 }
 
+.cd-timeline-block .cd-timeline-img {
+  -webkit-animation: gradient-end .5s ease forwards;
+  animation: gradient-end .5s ease forwards;
+}
+
+.cd-timeline-content {
+  position: relative;
+  margin-left: 60px;
+  margin-right: 30px;
+  border-radius: 10px;
+  padding: 1em;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 200% 200%;
+  -webkit-animation: gradient-end 2s ease forwards;
+  animation: gradient-end 2s ease forwards;
+}
+
+.cd-timeline-block:hover .cd-timeline-content {
+  -webkit-animation: gradient 2s ease forwards;
+  animation: gradient 2s ease forwards;
+}
+
 @-webkit-keyframes gradient {
   0% {
     background-position: auto 50%;
@@ -408,12 +434,25 @@ Main components
   }
 }
 
-.cd-timeline-block .cd-timeline-img {
-  -webkit-animation: gradient-end .5s ease forwards;
-  animation: gradient-end .5s ease forwards;
+@keyframes gradient {
+  0% {
+    background-position: auto 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
 }
 
 @-webkit-keyframes gradient-end {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes gradient-end {
   0% {
     background-position: 100% 50%;
   }
@@ -433,23 +472,6 @@ Main components
     -webkit-transform: translateZ(0);
     -webkit-backface-visibility: hidden;
   }
-}
-
-.cd-timeline-content {
-  position: relative;
-  margin-left: 60px;
-  margin-right: 30px;
-  border-radius: 10px;
-  padding: 1em;
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-  background-size: 200% 200%;
-  -webkit-animation: gradient-end 2s ease forwards;
-  animation: gradient-end 2s ease forwards;
-}
-
-.cd-timeline-block:hover .cd-timeline-content {
-  -webkit-animation: gradient 2s ease forwards;
-  animation: gradient 2s ease forwards;
 }
 
 .cd-timeline-content .timeline-content-info {
