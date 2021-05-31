@@ -9,6 +9,7 @@
 html, body {
   height: 100%;
   background-color: black;
+  scroll-behavior: smooth;
 }
 
 header {
@@ -30,7 +31,7 @@ header a:hover span {
 }
 
 header a.logo:hover::before {
-  content: "\00a0\00a0{}";
+  content: "\00a0\00a0\00a0;\00a0\00a0\00a0";
 }
 
 .header-right {
@@ -101,7 +102,7 @@ header a.logo:hover::before {
 
 #dots-2 {
   position: absolute;
-  top: 60%;
+  top: 45%;
   left: 50%;
   margin-top: -95px;
   margin-left: -375px;
@@ -109,7 +110,7 @@ header a.logo:hover::before {
 
 #rose {
   position: absolute;
-  top: 80%;
+  top: 70%;
   left: 50%;
   margin-top: -95px;
   margin-left: -375px;
@@ -181,6 +182,7 @@ header a.logo:hover::before {
 .about {
   text-align: center;
   background-color: white;
+  padding-top: 2%;
   height: 100%;
   font-family: var(--font-sans);
 }
@@ -279,7 +281,6 @@ header a.logo:hover::before {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-
 @media (min-width: 800px) {
   .page-content-projects {
     grid-template-columns: repeat(3, 1fr); /* Changes number of items per row*/
