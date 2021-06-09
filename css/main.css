@@ -8,7 +8,7 @@
 
 html, body {
   height: 100%;
-  background-color: black;
+  background-color: white;
   scroll-behavior: smooth;
 }
 
@@ -278,12 +278,16 @@ header a.logo:hover::before {
 
 @media (min-width: 600px) {
   .page-content-projects {
-    grid-template-columns: repeat(3, 1fr);
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
   }
 }
+
 @media (min-width: 800px) {
   .page-content-projects {
-    grid-template-columns: repeat(3, 1fr); /* Changes number of items per row*/
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    /* Changes number of items per row*/
   }
 }
 

@@ -282,10 +282,12 @@ header a.logo:hover::before {
   }
 }
 
+/*
+Timeline
+*/
 
 .cd-container {
-  width: 90%;
-  max-width: 80%;
+  max-width: 90%;
   margin: 0 auto;
   background: #000;
   padding: 0 10%;
@@ -298,11 +300,6 @@ header a.logo:hover::before {
   clear: both;
 }
 
-/* -------------------------------- 
-
-Main components 
-
--------------------------------- */
 #cd-timeline {
   position: relative;
   padding: 2em 0;
