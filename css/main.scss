@@ -199,8 +199,8 @@ header a.logo:hover::before {
 }
 
 .profile {
-  width: 14.5vw;
-  height: 32vh;
+  width: 350px;
+  height: 400px;
 }
 
 .back-showcase {
@@ -208,8 +208,8 @@ header a.logo:hover::before {
   float: left;
   top: 122%;
   left: 69%;
-  width: 15vw;
-  height: 17vw;
+  width: 350px;
+  height: 400px;
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   background-size: 200% 200%;
   -webkit-animation: gradient 10s ease infinite;
@@ -272,7 +272,7 @@ header a.logo:hover::before {
 }
 @media (min-width: 800px) {
   .page-content-projects {
-    grid-template-columns: repeat(3, 1fr); /* Changes number of items per row*/
+    grid-template-columns: repeat(2, 1fr); /* Changes number of items per row*/
   }
 }
 
@@ -331,19 +331,15 @@ header a.logo:hover::before {
 
 /* Project Pictures */
 .card-projects:nth-child(1):before {
-  background-image: url("../assets/");
-  width: 90%;
-  height: 70%;
+  background-image: url("../assets/acl23_preview.png");
+  width: 100%;
+  height: 80%;
 }
 .card-projects:nth-child(2):before {
-  background-image: url("../assets/");
-  width: 101%;
-  height: 70%;
-}
-.card-projects:nth-child(3):before {
-  background-image: url("../assets/");
-  width: 100%;
-  height: 100%;
+  background-image: url("../assets/general-gpt-logo.png");
+  left: 10%;
+  width: 80%;
+  height: 105%;
 }
 
 .content {
@@ -459,7 +455,7 @@ header a.logo:hover::before {
   }
 }
 
-.featured {
+.recent_work {
   padding-top: 23%;
 
 }

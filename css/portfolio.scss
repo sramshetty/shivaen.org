@@ -155,18 +155,22 @@ header a.logo:hover::before {
 /* Project Pictures */
 .card-projects:nth-child(1):before {
   background-image: url("../assets/{SR}.png");
+  top: 15%;
   width: 90%;
   height: 70%;
 }
 .card-projects:nth-child(2):before {
   background-image: url("../assets/output-onlinepngtools.png");
+  top: 5%;
   width: 101%;
   height: 70%;
 }
 .card-projects:nth-child(3):before {
   background-image: url("../assets/TreasureAI_logo.png");
-  width: 100%;
-  height: 100%;
+  top: 5%;
+  left: 10%;
+  width: 80%;
+  height: 80%;
 }
 
 .content {
