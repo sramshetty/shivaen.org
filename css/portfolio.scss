@@ -84,7 +84,7 @@ header a.logo:hover::before {
   display: grid;
   grid-gap: 1rem;
   padding: 1rem;
-  max-width: 1024px;
+  max-width: 80%;
   margin: 0 auto;
   font-family: var(--font-sans);
 }
@@ -95,7 +95,7 @@ header a.logo:hover::before {
 }
 @media (min-width: 800px) {
   .page-content-projects {
-    grid-template-columns: repeat(3, 1fr); /* Changes number of items per row*/
+    grid-template-columns: repeat(4, 1fr); /* Changes number of items per row*/
   }
 }
 
@@ -154,23 +154,46 @@ header a.logo:hover::before {
 
 /* Project Pictures */
 .card-projects:nth-child(1):before {
-  background-image: url("../assets/{SR}.png");
-  top: 15%;
-  width: 90%;
-  height: 70%;
+  background-image: url("../assets/split-turn-down-right-svgrepo-com.svg");
+  background-repeat: no-repeat;
+  background-size: 45%;
+  background-position: center 40%;
 }
 .card-projects:nth-child(2):before {
-  background-image: url("../assets/output-onlinepngtools.png");
-  top: 5%;
-  width: 101%;
-  height: 70%;
+  background-image: url("../assets/scissors-cutting-a-rectangular-shape-of-broken-line-svgrepo-com.svg");
+  background-repeat: no-repeat;
+  background-size: 45%;
+  background-position: center 40%;
 }
 .card-projects:nth-child(3):before {
-  background-image: url("../assets/TreasureAI_logo.png");
-  top: 5%;
-  left: 10%;
-  width: 80%;
-  height: 80%;
+  background-image: url("../assets/cloud-download-svgrepo-com.svg");
+  background-repeat: no-repeat;
+  background-size: 45%;
+  background-position: center 40%;
+}
+.card-projects:nth-child(4):before {
+  background-image: url("../assets/modeling-svgrepo-com.svg");
+  background-repeat: no-repeat;
+  background-size: 45%;
+  background-position: center 40%;
+}
+.card-projects:nth-child(5):before {
+  background-image: url("../assets/browser-svgrepo-com.svg");
+  background-repeat: no-repeat;
+  background-size: 45%;
+  background-position: center 40%;
+}
+.card-projects:nth-child(6):before {
+  background-image: url('../assets/videocall-svgrepo-com.svg');
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: center 40%;
+}
+.card-projects:nth-child(7):before {
+  background-image: url("../assets/impossible-triangle-svgrepo-com.svg");
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: center 40%;
 }
 
 .content {
@@ -182,6 +205,7 @@ header a.logo:hover::before {
           flex-direction: column;
   -webkit-box-align: center;
           align-items: center;
+  top: 5%;
   width: 100%;
   padding: 1rem;
   -webkit-transition: -webkit-transform var(--d) var(--e);
@@ -195,10 +219,15 @@ header a.logo:hover::before {
 }
 
 .title {
-  margin-top: 2%;
+  margin-top: -5%;
   font-size: 1.3rem;
   font-weight: bold;
-  line-height: .1;
+  line-height: 1;
+}
+@media (min-width: 1440px) {
+  .title {
+    margin-top: 2%;
+  }
 }
 
 .timeframe {

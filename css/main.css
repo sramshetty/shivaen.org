@@ -236,130 +236,131 @@ header a.logo:hover::before {
   max-width: 1024px;
   margin: 0 auto;
   font-family: var(--font-sans);
+  padding-bottom: 10%;
 }
 
 @media (min-width: 600px) {
   .page-content-projects {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 @media (min-width: 800px) {
   .page-content-projects {
-    grid-template-columns: repeat(2, 1fr); /* Changes number of items per row*/
+    grid-template-columns: repeat(1, 1fr); /* Changes number of items per row*/
+  }
+  /* Project Pictures */
+}
+@media (min-width: 800px) and (min-width: 1024px) {
+  .page-content-projects {
+    padding-bottom: 0%;
   }
 }
-.card-projects {
-  position: relative;
-  display: flex;
-  align-items: flex-end;
-  overflow: hidden;
-  padding: 1rem;
-  width: 100%;
-  text-align: center;
-  color: whitesmoke;
-  background-color: whitesmoke;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.1);
-}
-
-@media (min-width: 600px) {
+@media (min-width: 800px) {
   .card-projects {
-    height: 350px;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    color: whitesmoke;
+    background-color: whitesmoke;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.1);
   }
 }
-.card-projects:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 110%;
-  background-size: cover;
-  background-position: 0 0;
-  transition: transform calc(var(--d) * 1.5) var(--e);
-  pointer-events: none;
+@media (min-width: 800px) and (min-width: 600px) {
+  .card-projects {
+    height: 130%;
+    width: 60%;
+    left: 20%;
+  }
 }
-
-.card-projects:after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 200%;
-  pointer-events: none;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.009) 11.7%, rgba(0, 0, 0, 0.034) 22.1%, rgba(0, 0, 0, 0.072) 31.2%, rgba(0, 0, 0, 0.123) 39.4%, rgba(0, 0, 0, 0.182) 46.6%, rgba(0, 0, 0, 0.249) 53.1%, rgba(0, 0, 0, 0.32) 58.9%, rgba(0, 0, 0, 0.394) 64.3%, rgba(0, 0, 0, 0.468) 69.3%, rgba(0, 0, 0, 0.54) 74.1%, rgba(0, 0, 0, 0.607) 78.8%, rgba(0, 0, 0, 0.668) 83.6%, rgba(0, 0, 0, 0.721) 88.7%, rgba(0, 0, 0, 0.762) 94.1%, rgba(0, 0, 0, 0.79) 100%);
-  transform: translateY(-50%);
-  transition: transform calc(var(--d) * 2) var(--e);
+@media (min-width: 800px) {
+  .card-projects:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 110%;
+    background-size: cover;
+    background-position: 0 0;
+    transition: transform calc(var(--d) * 1.5) var(--e);
+    pointer-events: none;
+  }
+  .card-projects:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    pointer-events: none;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.009) 11.7%, rgba(0, 0, 0, 0.034) 22.1%, rgba(0, 0, 0, 0.072) 31.2%, rgba(0, 0, 0, 0.123) 39.4%, rgba(0, 0, 0, 0.182) 46.6%, rgba(0, 0, 0, 0.249) 53.1%, rgba(0, 0, 0, 0.32) 58.9%, rgba(0, 0, 0, 0.394) 64.3%, rgba(0, 0, 0, 0.468) 69.3%, rgba(0, 0, 0, 0.54) 74.1%, rgba(0, 0, 0, 0.607) 78.8%, rgba(0, 0, 0, 0.668) 83.6%, rgba(0, 0, 0, 0.721) 88.7%, rgba(0, 0, 0, 0.762) 94.1%, rgba(0, 0, 0, 0.79) 100%);
+    transform: translateY(-50%);
+    transition: transform calc(var(--d) * 2) var(--e);
+  }
+  .card-projects:nth-child(1):before {
+    background-image: url("../assets/acl23_preview.png");
+    width: 100%;
+    height: 80%;
+  }
+  .card-projects:nth-child(2):before {
+    background-image: url("../assets/general-gpt-logo.png");
+    left: 10%;
+    width: 80%;
+    height: 105%;
+  }
+  .content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 7%;
+    width: 100%;
+    padding: 1rem;
+    transition: transform var(--d) var(--e);
+    z-index: 1;
+  }
+  .content > * + * {
+    margin-top: 1rem;
+  }
+  .title {
+    margin-top: 2%;
+    font-size: 1.3rem;
+    font-weight: bold;
+    line-height: 0.1;
+  }
+  .timeframe {
+    font-family: var(--font-serif);
+    font-size: 1.125rem;
+    font-style: italic;
+    line-height: 0.2;
+    margin-bottom: 0.02rem;
+  }
+  .btn {
+    cursor: pointer;
+    margin-bottom: 2%;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.65rem;
+    font-weight: bold;
+    letter-spacing: 0.025rem;
+    text-transform: uppercase;
+    color: white;
+    background-color: black;
+    border: none;
+  }
+  .btn:hover {
+    background-color: #0d0d0d;
+  }
+  .btn:focus {
+    outline: 1px dashed yellow;
+    outline-offset: 3px;
+  }
 }
-
-/* Project Pictures */
-.card-projects:nth-child(1):before {
-  background-image: url("../assets/acl23_preview.png");
-  width: 100%;
-  height: 80%;
-}
-
-.card-projects:nth-child(2):before {
-  background-image: url("../assets/general-gpt-logo.png");
-  left: 10%;
-  width: 80%;
-  height: 105%;
-}
-
-.content {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  padding: 1rem;
-  transition: transform var(--d) var(--e);
-  z-index: 1;
-}
-
-.content > * + * {
-  margin-top: 1rem;
-}
-
-.title {
-  margin-top: 2%;
-  font-size: 1.3rem;
-  font-weight: bold;
-  line-height: 0.1;
-}
-
-.timeframe {
-  font-family: var(--font-serif);
-  font-size: 1.125rem;
-  font-style: italic;
-  line-height: 0.2;
-  margin-bottom: 0.02rem;
-}
-
-.btn {
-  cursor: pointer;
-  margin-bottom: 2%;
-  padding: 0.75rem 1.5rem;
-  font-size: 0.65rem;
-  font-weight: bold;
-  letter-spacing: 0.025rem;
-  text-transform: uppercase;
-  color: white;
-  background-color: black;
-  border: none;
-}
-
-.btn:hover {
-  background-color: #0d0d0d;
-}
-
-.btn:focus {
-  outline: 1px dashed yellow;
-  outline-offset: 3px;
-}
-
-@media (hover: hover) and (min-width: 600px) {
+@media (min-width: 800px) and (hover: hover) and (min-width: 600px) {
   .card-projects:after {
     transform: translateY(0);
   }
@@ -398,7 +399,4 @@ header a.logo:hover::before {
   .card-projects:focus-within .content > *:not(.title) {
     transition-duration: 0s;
   }
-}
-.recent_work {
-  padding-top: 23%;
 }/*# sourceMappingURL=main.css.map */
