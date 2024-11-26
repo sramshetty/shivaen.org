@@ -11,3 +11,4 @@
 * Solar System Load Page: Copyright (c) 2020 by Jack Thomson (https://codepen.io/Jackthomsonn/pen/bdLGrq)
 * Contact Page Background Animations: Copyright (c) 2020 by Marco Guglielmelli (https://codepen.io/MarcoGuglielmelli/pen/lLCxy)
 * Timeline Template: Copyright (c) 2021 by Yago Gonzalez (https://codepen.io/ygc/pen/AXzVya)
+* Gallery Template: Copyright (c) 2024 by Arthur Camara (https://codepen.io/arthurcamara1/pen/KaMBZg)
