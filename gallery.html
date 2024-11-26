@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Shivaen.Gallery</title>
+    <link rel="icon" href="../assets/favicon.ico">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script> 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <header>
+    <a class="logo" href="index.html"><span>{SR}</span></a>
+    <div class="header-right">
+      <a class="link" href="portfolio.html">Portfolio</a>
+      <a class="link" href="contact.html">Contact</a>
+    </div>
+  </header>
+  <div class="gallery">
+    <h1 class="title">Gallery</h1>
+    <section class="grid">
+      <div class="grid-row">
+        <a class="card" onClick="openAlbum(1)" id="card-1">
+          <div class="card-thumb">
+            <div class="card-shadow"></div>
+            <div class="card-shadow"></div>
+            <div class="card-shadow"></div>
+            <div class="card-image" style="background-image: url(https://s3.us-east-1.amazonaws.com/shivaen.gallery/japan-oct-2024/tokyo_tower.JPG)"></div>
+          </div>
+          <div class="card-title"><span>Japan 2024</span></div>
+          <div class="card-explore"><span>Explore more</span></div>
+          <button class="card-button"></button>
+        </a>
+        <a class="card" onClick="openAlbum(2)" id="card-2">
+          <div class="card-thumb">
+            <div class="card-shadow"></div>
+            <div class="card-shadow"></div>
+            <div class="card-shadow"></div>
+            <div class="card-image" style="background-image: url(https://s3.us-east-1.amazonaws.com/shivaen.gallery/seattle-aug-2024/seattle_skyline.JPG)"></div>
+          </div>
+          <div class="card-title"><span>Seattle 2024</span></div>
+          <div class="card-explore"><span>Explore more</span></div>
+          <button class="card-button"></button>
+        </a>
+      </div>
+    </section>
+    <section class="album" id="album-1">
+      <div class="album-header"><a class="album-close" onclick="closeAll()">×</a></div>
+      <div class="album-images">
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/japan-oct-2024/tokyo_tower.JPG"></div>
+        <div class="album-image-portrait" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/japan-oct-2024/tokyo_tower_on_the_move.JPG"></div>
+      </div>
+      <div class="album-images">
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/japan-oct-2024/tokyo_tower_skyline.JPG"></div>
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/japan-oct-2024/tokyo_tower_street.JPG"></div>
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/japan-oct-2024/tokyo_tower_mirror.JPG"></div>
+      </div>
+      <div class="album-images">
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/japan-oct-2024/night_shibuya.JPG"></div>
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/japan-oct-2024/night_alley.JPG"></div>
+      </div>
+      <div class="album-images">
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/japan-oct-2024/asakusa.JPG"></div>
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/japan-oct-2024/asakusa_roof.JPG"></div>
+        <div class="album-image-portrait" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/japan-oct-2024/asakusa_woman.JPG"></div>
+      </div>
+      <div class="album-images">
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/japan-oct-2024/ginza_towers.JPG"></div>
+      </div>
+      <div class="album-images">
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/japan-oct-2024/imperial_palace_skyline.JPG"></div>
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/japan-oct-2024/imperial_palace_wall_castle.JPG"></div>
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/japan-oct-2024/imperial_palace_trees.JPG"></div>
+      </div>
+      <div class="album-images">
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/japan-oct-2024/teamlabs_orbs.JPG"></div>
+      </div>
+      <div class="album-images">
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/japan-oct-2024/hakone_river_valley.JPG"></div>
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/japan-oct-2024/fujisan.JPG"></div>
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/japan-oct-2024/fujisan_lake_ashi.JPG"></div>
+        <div class="album-image-portrait" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/japan-oct-2024/fujisan_lake_ashi_pirate_ship.JPG"></div>
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/japan-oct-2024/owakudani.JPG"></div>
+      </div>
+      <div class="album-images">
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/japan-oct-2024/nagoya_flowers.JPG"></div>
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/japan-oct-2024/nagoya_plants.JPG"></div>
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/japan-oct-2024/nagoya_garage.JPG"></div>
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/japan-oct-2024/nagoya_museum_roof.JPG"></div>
+      </div>
+      <div class="album-images">
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/japan-oct-2024/kyoto_traditional_roof2.JPG"></div>
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/japan-oct-2024/kyoto_traditional_interior.JPG"></div>
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/japan-oct-2024/kyoto_pond.JPG"></div>
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/japan-oct-2024/kyoto_garden.JPG"></div>
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/japan-oct-2024/kyoto_garden_door_roof.JPG"></div>
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/japan-oct-2024/kyoto_taxi.JPG"></div>
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/japan-oct-2024/kyoto_subway.JPG"></div>
+      </div>
+      <div class="album-images">
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/japan-oct-2024/kinkakuji.JPG"></div>
+      </div>
+      <div class="album-images">
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/japan-oct-2024/fushimi_inari_taisha.JPG"></div>
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/japan-oct-2024/fushimi_inari_taisha_night.JPG"></div>
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/japan-oct-2024/fushimi_inari_taisha_night_street.JPG"></div>
+      </div>
+      <div class="album-images">
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/japan-oct-2024/todaiji.JPG"></div>
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/japan-oct-2024/todaiji_roof_corner.JPG"></div>
+      </div>
+      <div class="album-images">
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/japan-oct-2024/kansai_birds.JPG"></div>
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/japan-oct-2024/kansai_skyline.JPG"></div>
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/japan-oct-2024/kansai_tree.JPG"></div>
+      </div>
+      <div class="album-images">
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/japan-oct-2024/osaka_street_in_rain.JPG"></div>
+      </div>
+    </section>
+    <section class="album" id="album-2">
+      <div class="album-header"><a class="album-close" onclick="closeAll()">×</a></div>
+      <div class="album-images">
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/seattle-aug-2024/sba_southwest.JPG"></div>
+      </div>
+      <div class="album-images">
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/seattle-aug-2024/seattle_skyline.JPG"></div>
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/seattle-aug-2024/seattle_space_needle.JPG"></div>
+        <div class="album-image-portrait" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/seattle-aug-2024/pacific_science_center.JPG"></div>
+      </div>
+      <div class="album-images">
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/seattle-aug-2024/lake_crescent_trail_woods.JPG"></div>
+        <div class="album-image-portrait" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/seattle-aug-2024/lake_crescent_bridge.JPG"></div>
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/seattle-aug-2024/lake_crescent_kayaks.JPG"></div>
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/seattle-aug-2024/lake_crescent_boat3.JPG"></div>
+      </div>
+      <div class="album-images">
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/seattle-aug-2024/mt_olympus_comets.JPG"></div>
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/seattle-aug-2024/mt_olympus_sunset.JPG"></div>
+      </div>
+      <div class="album-images">
+        <div class="album-image-portrait" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/seattle-aug-2024/olympic_boulder_path.JPG"></div>
+        <div class="album-image-portrait" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/seattle-aug-2024/olympic_area_closed.JPG"></div>
+      </div>
+      <div class="album-images">
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/seattle-aug-2024/pike_place.JPG"></div>
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/seattle-aug-2024/public_market.JPG"></div>
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/seattle-aug-2024/life_ring.JPG"></div>
+      </div>
+    </section>
+  </div>
+  <script src="js/gallery.js"></script>
+</body>
+
+</html>
