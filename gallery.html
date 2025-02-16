@@ -29,9 +29,9 @@
             <div class="card-shadow"></div>
             <div class="card-shadow"></div>
             <div class="card-shadow"></div>
-            <div class="card-image" style="background-image: url(https://s3.us-east-1.amazonaws.com/shivaen.gallery/japan-oct-2024/tokyo_tower.JPG)"></div>
+            <div class="card-image" style="background-image: url(https://s3.us-east-1.amazonaws.com/shivaen.gallery/seattle-aug-2024/seattle_skyline.JPG)"></div>
           </div>
-          <div class="card-title"><span>Japan 2024</span></div>
+          <div class="card-title"><span>Seattle 2024</span></div>
           <div class="card-explore"><span>Explore more</span></div>
           <button class="card-button"></button>
         </a>
@@ -40,15 +40,56 @@
             <div class="card-shadow"></div>
             <div class="card-shadow"></div>
             <div class="card-shadow"></div>
-            <div class="card-image" style="background-image: url(https://s3.us-east-1.amazonaws.com/shivaen.gallery/seattle-aug-2024/seattle_skyline.JPG)"></div>
+            <div class="card-image" style="background-image: url(https://s3.us-east-1.amazonaws.com/shivaen.gallery/japan-oct-2024/tokyo_tower.JPG)"></div>
           </div>
-          <div class="card-title"><span>Seattle 2024</span></div>
+          <div class="card-title"><span>Japan 2024</span></div>
+          <div class="card-explore"><span>Explore more</span></div>
+          <button class="card-button"></button>
+        </a>
+        <a class="card" onClick="openAlbum(3)" id="card-3">
+          <div class="card-thumb">
+            <div class="card-shadow"></div>
+            <div class="card-shadow"></div>
+            <div class="card-shadow"></div>
+            <div class="card-image" style="background-image: url(https://s3.us-east-1.amazonaws.com/shivaen.gallery/nyc_2024/brooklyn_bridge.JPG)"></div>
+          </div>
+          <div class="card-title"><span>NYC 2024</span></div>
           <div class="card-explore"><span>Explore more</span></div>
           <button class="card-button"></button>
         </a>
       </div>
     </section>
     <section class="album" id="album-1">
+      <div class="album-header"><a class="album-close" onclick="closeAll()">×</a></div>
+      <div class="album-images">
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/seattle-aug-2024/sba_southwest.JPG"></div>
+      </div>
+      <div class="album-images">
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/seattle-aug-2024/seattle_skyline.JPG"></div>
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/seattle-aug-2024/seattle_space_needle.JPG"></div>
+        <div class="album-image-portrait" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/seattle-aug-2024/pacific_science_center.JPG"></div>
+      </div>
+      <div class="album-images">
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/seattle-aug-2024/lake_crescent_trail_woods.JPG"></div>
+        <div class="album-image-portrait" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/seattle-aug-2024/lake_crescent_bridge.JPG"></div>
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/seattle-aug-2024/lake_crescent_kayaks.JPG"></div>
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/seattle-aug-2024/lake_crescent_boat3.JPG"></div>
+      </div>
+      <div class="album-images">
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/seattle-aug-2024/mt_olympus_comets.JPG"></div>
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/seattle-aug-2024/mt_olympus_sunset.JPG"></div>
+      </div>
+      <div class="album-images">
+        <div class="album-image-portrait" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/seattle-aug-2024/olympic_boulder_path.JPG"></div>
+        <div class="album-image-portrait" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/seattle-aug-2024/olympic_area_closed.JPG"></div>
+      </div>
+      <div class="album-images">
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/seattle-aug-2024/pike_place.JPG"></div>
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/seattle-aug-2024/public_market.JPG"></div>
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/seattle-aug-2024/life_ring.JPG"></div>
+      </div>
+    </section>
+    <section class="album" id="album-2">
       <div class="album-header"><a class="album-close" onclick="closeAll()">×</a></div>
       <div class="album-images">
         <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/japan-oct-2024/tokyo_tower.JPG"></div>
@@ -122,34 +163,64 @@
         <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/japan-oct-2024/osaka_street_in_rain.JPG"></div>
       </div>
     </section>
-    <section class="album" id="album-2">
+    <section class="album" id="album-3">
       <div class="album-header"><a class="album-close" onclick="closeAll()">×</a></div>
       <div class="album-images">
-        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/seattle-aug-2024/sba_southwest.JPG"></div>
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/nyc_2024/rockefeller_christmas_tree.JPG"></div>
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/nyc_2024/times_square.JPG"></div>
       </div>
       <div class="album-images">
-        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/seattle-aug-2024/seattle_skyline.JPG"></div>
-        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/seattle-aug-2024/seattle_space_needle.JPG"></div>
-        <div class="album-image-portrait" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/seattle-aug-2024/pacific_science_center.JPG"></div>
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/nyc_2024/subway.JPG"></div>
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/nyc_2024/subway_seats.JPG"></div>
       </div>
       <div class="album-images">
-        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/seattle-aug-2024/lake_crescent_trail_woods.JPG"></div>
-        <div class="album-image-portrait" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/seattle-aug-2024/lake_crescent_bridge.JPG"></div>
-        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/seattle-aug-2024/lake_crescent_kayaks.JPG"></div>
-        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/seattle-aug-2024/lake_crescent_boat3.JPG"></div>
+        <div class="album-image-portrait" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/nyc_2024/empire_state.JPG"></div>
       </div>
       <div class="album-images">
-        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/seattle-aug-2024/mt_olympus_comets.JPG"></div>
-        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/seattle-aug-2024/mt_olympus_sunset.JPG"></div>
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/nyc_2024/empire_from_roof.JPG"></div>
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/nyc_2024/empire_new_yorker.JPG"></div>
       </div>
       <div class="album-images">
-        <div class="album-image-portrait" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/seattle-aug-2024/olympic_boulder_path.JPG"></div>
-        <div class="album-image-portrait" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/seattle-aug-2024/olympic_area_closed.JPG"></div>
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/nyc_2024/street_shot_1.JPG"></div>
+        <div class="album-image-portrait" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/nyc_2024/street_shot_2.JPG"></div>
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/nyc_2024/street_shot_3.JPG"></div>
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/nyc_2024/street_shot_5.JPG"></div>
       </div>
       <div class="album-images">
-        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/seattle-aug-2024/pike_place.JPG"></div>
-        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/seattle-aug-2024/public_market.JPG"></div>
-        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/seattle-aug-2024/life_ring.JPG"></div>
+        <div class="album-image-portrait" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/nyc_2024/street_shot_4.JPG"></div>
+      </div>
+      <div class="album-images">
+        <div class="album-image-portrait" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/nyc_2024/oculus_wtc.JPG"></div>
+      </div>
+      <div class="album-images">
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/nyc_2024/building_from_oculus.JPG"></div>
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/nyc_2024/oculus_edge.JPG"></div>
+        <div class="album-image-portrait" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/nyc_2024/oculus_ceiling.JPG"></div>
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/nyc_2024/oculus_escalator.JPG"></div>
+      </div>
+      <div class="album-images">
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/nyc_2024/colorful_oculus.JPG"></div>
+      </div>
+      <div class="album-images">
+        <div class="album-image-portrait" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/nyc_2024/sunny_one_wtc.JPG"></div>
+        <div class="album-image-portrait" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/nyc_2024/one_wtc_sunset.JPG"></div>
+      </div>
+      <div class="album-images">
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/nyc_2024/chinatown.JPG"></div>
+      </div>
+      <div class="album-images">
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/nyc_2024/brooklyn_bridge.JPG"></div>
+        <div class="album-image-portrait" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/nyc_2024/manhattan_bridge.JPG"></div>
+      </div>
+      <div class="album-images">
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/nyc_2024/city_from_brooklyn_park.JPG"></div>
+      </div>
+      <div class="album-images">
+        <div class="album-image-portrait" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/nyc_2024/edge_observation_1.JPG"></div>
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/nyc_2024/edge_observation_2.JPG"></div>
+      </div>
+      <div class="album-images">
+        <div class="album-image" data-bg="https://s3.us-east-1.amazonaws.com/shivaen.gallery/nyc_2024/distant_skyline.JPG"></div>
       </div>
     </section>
   </div>
